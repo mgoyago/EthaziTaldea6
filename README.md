@@ -1,4 +1,5 @@
 # EthaziTaldea6
+#VeEX
 1. Ezaugarri Nagusiak
 Mapa Interaktiboa:
 
