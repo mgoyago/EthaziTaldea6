@@ -44,3 +44,39 @@ Sare Sozialekin Integratzea:
 
 Erabiltzaileek ekitaldiak sare sozialetan (Facebook, Twitter, Instagram) zuzenean webgunetik partekatu ahal izango dituzte.
 Denbora errealean ekitaldien eta txapelketen profil ofizialak jarraitzeko aukerak.
+
+FUNTZIONALITATEA
+
+-Mapa interactiboa non mapan agertuko dira torneoen jokalekua
+  .markadore interaktiboa
+  .filtroak
+  .Animazioak
+
+-Ebentoen kalendario interaktibo
+  .notifikazioa , berriak
+  .dinamikoa
+
+-Emaitzak denbora errealean
+  .estekak 
+
+-Predikzio jokoak
+  .formulariok
+  .ranking
+
+-Enkuetas antes del partido 
+  .botazioak
+  .mvp
+  .irabazlea
+
+-Juego de trivia
+
+-Puntuazio sistema
+
+
+
+ 
+
+
+
+
+
