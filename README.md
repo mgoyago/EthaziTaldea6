@@ -83,21 +83,15 @@ Sistema egonkor eta arin bat garatuko da, non erabiltzaileek irabazi eta galdu d
 - MVP: partida bakoitzaren MVP-ari apustu ahal izango da.
 - Tribial: partida bakoitzeko tribial bat egin ahal izango da eta honekin puntuak irabazi.
 
-
-
-
-
-
 JOKUAK:
-
-1: CSGO
-2: LOL
-3: VALORANT
-4: R6
-5: ROCKET LEAGUE
-6: EA FC
-7: DOTA 2
-8: OVERWATCH
+1. CSGO
+2. LOL
+3. VALORANT
+4. R6
+5. ROCKET LEAGUE
+6. EA FC
+7. DOTA 2
+8. OVERWATCH
  
 
 
