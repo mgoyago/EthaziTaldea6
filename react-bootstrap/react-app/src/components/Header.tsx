@@ -1,6 +1,7 @@
 import './Header.css';
 import Logo from '../assets/img/LogoBlanco.png';
 import User from '../assets/img/user-removebg-preview.png';
+import Lupa from '../assets/img/lupa-removebg-preview.png';
 
 function Header() {
     return (
@@ -8,44 +9,40 @@ function Header() {
             <a href="#" className="text-white text-decoration-none logo" style={{ fontSize: "32px", fontWeight: "bold" }}></a>
             <nav className="d-lg-flex">
                 <ul className="nav">
-                    <li className="nav-item">
-                    <a href="#">
-                            <img 
-                                src={User} 
-                                alt=""
-                                className="nav-image"
-                            />
-                    </a>      
-                    </li>
-                    <li className="nav-item">
-                    <a href="#">
-                            <img 
-                                src={Logo} 
-                                alt=""
-                                className="nav-image logo-size"
-                            />
-                    </a>                    
-                    </li>
-                    
                     
                     <li className="nav-item">
                         <a href="#">
-                            <form className="d-flex search-bar">
-                                <input
-                                    type="text"
-                                    className="form-control me-2"
-                                    placeholder=""
-                                    aria-label="Search"
-                                />
-                                <button className="btn btn-outline-light" type="submit">
+                            <img 
+                                src={User} 
+                                alt="User Icon"
+                                className="nav-image user-size"
+                            />
+                        </a>      
+                    </li>
+                    <li className="nav-item">
+                        <a href="#">
+                            <img 
+                                src={Logo} 
+                                alt="Logo"
+                                className="nav-image logo-size"
+                            />
+                        </a>                    
+                    </li>
+                    <li className="nav-item">
+                        <form className="d-flex search-container" role="search">
+                            <input 
+                                type="text" 
+                                className="form-control search-input" 
+                                placeholder="Buscar..." 
+                            />
+                            <button type="submit" className="btn search-button">
                                 <img 
-                                    src="path/to/your/image.png" 
-                                    alt="Buscar"
-                                    className="lupa"
+                                    src={Lupa} 
+                                    alt="Search Icon" 
+                                    className="nav-image lupa-size"
                                 />
-                                </button>
-                            </form>
-                        </a>
+                            </button>
+                        </form>
                     </li>
                 </ul>
             </nav>

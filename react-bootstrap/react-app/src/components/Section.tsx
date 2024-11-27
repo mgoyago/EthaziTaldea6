@@ -9,8 +9,9 @@ function Section() {
             Your browser does not support the video tag.
           </video>
           <div className="content">
-            <h1>Bienvenido</h1>
-            <p>Este es un video de fondo.</p>
+            <h1>Ongi etorri</h1>
+            <p>Hasi nabigatzen</p>
+            <button className="btn btn-danger">Ikusi</button>
           </div>
         </div>
       );

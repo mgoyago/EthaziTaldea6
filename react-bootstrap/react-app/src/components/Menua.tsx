@@ -11,7 +11,7 @@ function Menua() {
     return (
         <div className="container-fluid">
             <button 
-                className="btn text-white custom-btn bg-black" 
+                className="btn custom-btn btn-outline-light" 
                 onClick={toggleMenu}
             >
                 {isOpen ? '' : '☰'}
@@ -20,7 +20,7 @@ function Menua() {
             <div className="row">
                 <nav className={`col-12 navbar navbar-expand-lg navbar-light bg-black vh-100 align-items-start col-sm-2 ${isOpen ? 'open' : 'closed'} custom-border`}>
                     <button 
-                        className="btn text-white toggle-btn bg-black" 
+                        className="btn toggle-btn btn-outline-light" 
                         onClick={toggleMenu}
                     >
                         X

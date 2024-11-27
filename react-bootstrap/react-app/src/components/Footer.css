@@ -1,11 +1,51 @@
-.footer {
-    height: 50px; 
+/* Footer superior con información */
+.footer-info {
+  background-color: #333;  
+}
 
-  }
-  
-  .footer-image {
+.footer-info .social-logo {
+  width: 40px;  
+  height: 40px;
+  object-fit: contain;
+}
 
-    width: 100%;
-    object-fit: contain; 
-  }
-  
+.footer-info p {
+  text-align: justify;
+}
+
+.footer-info .col-md-4 {
+  margin-bottom: 30px;
+  padding: 15px;  /* Añadido para mayor espaciado */
+  border-right: 1px solid #444; /* Línea separadora entre columnas */
+}
+
+/* Eliminar la línea de la última columna */
+.footer-info .col-md-4:last-child {
+  border-right: none;
+}
+
+.footer-info ul {
+  padding-left: 0;
+}
+
+.footer-info ul li a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.footer-info ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-video-container {
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}

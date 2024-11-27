@@ -1,5 +1,5 @@
 .header {
-    height: 60px;
+    height: 80px;
     position: absolute;
     top: 0;
     display: flex;
@@ -10,6 +10,7 @@
     width: 100%;
     z-index: 1;
 }
+
 .logo {
     font-size: 24px;
     font-weight: bold;
@@ -19,18 +20,12 @@
     text-decoration: none;
 }
 
-.nav-logo {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-}
-
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    gap: 660px; 
+    list-style: none;
 }
 
 .nav-item {
@@ -39,46 +34,44 @@
     padding-right: 10px;
 }
 
+.nav-item:nth-child(2) {
+    margin-left: auto; 
+    margin-right: auto;
+}
+
 .nav-image {
     width: 50px;
-    height: 50px;
+    height: auto;
     object-fit: cover;
-    border-radius: 50%; 
+    border-radius: 50%;
     transition: transform 0.3s ease;
 }
 
 .nav-image:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
+
 .logo-size {
     width: 90px;
-    height: auto; 
+    height: auto;
+    margin-right: 575px;
 }
-.search-bar {
-    display: flex;
-    align-items: center;
+.user-size {
+    width: 50px;
+    height: auto;
+    margin-right: 770px;
+}
+.lupa-size {
+    width: 50px;
+    height: auto;
 }
 
-.search-bar input {
+.search-input {
     border: 1px solid #ccc;
-    border-radius: 25px;
-    padding: 8px 15px;
-    font-size: 14px;
-    width: 160px;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    width: 200px; 
+    height: 30px;
+    margin-top: 15px;
 }
-
-.search-bar button {
-    background-color: transparent;
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    padding: 8px 15px;
-    cursor: pointer;
-    color: white;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.search-bar button:hover {
-    background-color: #f4a261;
-    color: black;
-}
-
