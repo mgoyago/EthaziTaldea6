@@ -1,0 +1,84 @@
+.header {
+    height: 60px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    padding: 0 20px;
+    width: 100%;
+    z-index: 1;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 660px; 
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.nav-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%; 
+    transition: transform 0.3s ease;
+}
+
+.nav-image:hover {
+    transform: scale(1.1); 
+}
+.logo-size {
+    width: 90px;
+    height: auto; 
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 8px 15px;
+    font-size: 14px;
+    width: 160px;
+}
+
+.search-bar button {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 8px 15px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #f4a261;
+    color: black;
+}
+

@@ -14,7 +14,7 @@ function Menua() {
                 className="btn text-white custom-btn bg-black" 
                 onClick={toggleMenu}
             >
-                {isOpen ? '' : 'X'}
+                {isOpen ? '' : '☰'}
             </button>
 
             <div className="row">

@@ -1,0 +1,11 @@
+.footer {
+    height: 50px; 
+
+  }
+  
+  .footer-image {
+
+    width: 100%;
+    object-fit: contain; 
+  }
+  

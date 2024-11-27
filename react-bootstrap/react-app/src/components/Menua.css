@@ -1,9 +1,7 @@
-/* Estilos del botón para abrir/cerrar el menú */
 .toggle-btn {
-    position: fixed;
+    position: absolute;
     top: 10px;
     right: 10px;
-    z-index: 10;
     background-color: transparent;
     border: none;
     font-size: 16px;
@@ -19,25 +17,24 @@
     font-size: 16px;
     color: white;
 }
-
-/* Animación para el menú */
 .navbar {
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(-100%);
+    z-index: 10;
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
-    z-index: 9;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
 }
-
 .navbar.open {
     transform: translateX(0);
 }
-
 .navbar.closed {
     transform: translateX(-100%);
 }
 .custom-border {
     border-right: 2px solid white;
+}
+.container-fluid{
+    position: absolute;
 }

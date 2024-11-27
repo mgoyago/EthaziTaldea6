@@ -1,0 +1,28 @@
+/* Contenedor principal */
+.video-container {
+  position: relative; /* Establece un contexto de posicionamiento */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Video de fondo */
+.background-video {
+  position: absolute; /* El video se posiciona en relación al contenedor */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que el video cubra todo el contenedor */
+  z-index: -1; /* Envía el video al fondo */
+}
+
+/* Contenido principal */
+.content {
+  position: relative; /* Asegura que el z-index funcione */
+  z-index: 1; /* Coloca el contenido por encima del video */
+  color: white; /* Hace el texto visible */
+  text-align: center; /* Centra horizontalmente */
+  padding-top: 30vh; /* Centra verticalmente con un margen superior */
+  font-family: Arial, sans-serif; /* Estilo adicional opcional */
+}
