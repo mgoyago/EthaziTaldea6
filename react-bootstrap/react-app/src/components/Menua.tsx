@@ -21,7 +21,7 @@ function Menua({ setCurrentSection }: MenuaProps) {
     };
 
     return (
-        <div className="container-fluid overflow-hidden">
+        <div className="container-fluid">
             <button 
                 className="btn custom-btn btn-outline-light" 
                 onClick={toggleMenu}

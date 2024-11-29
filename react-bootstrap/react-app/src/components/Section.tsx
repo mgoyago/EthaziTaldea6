@@ -30,10 +30,7 @@ function Section({ currentSection }: SectionProps) {
           <div className="col-md-4 text-white z-1 ms-1 ">
             <h2>About us</h2>
             <p>
-              Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
-              Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,
-              cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una
-              galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.
+            Gu, eSports munduari buruzko informazioa eskaintzen duen webgune bat gara. Gure helburua, bideo-jokoen lehiaketa eta txapelketa garrantzitsuen inguruko azken berriak eta gertakarien informazioa eskaintzea da.   Gu, eSports munduari buruzko informazioa eskaintzen duen webgune bat gara. Gure helburua, bideo-jokoen lehiaketa eta txapelketa garrantzitsuen inguruko azken berriak eta gertakarien informazioa eskaintzea da.  
             </p>
           </div>
           <div style={{width:"32%"}}>
