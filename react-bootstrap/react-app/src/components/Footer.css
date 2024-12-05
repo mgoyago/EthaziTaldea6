@@ -73,3 +73,14 @@
 .footer-info .social-logo:hover {
   transform: scale(1.1);
 }
+
+.footer-info .logo-container {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.footer-info .footer-logo {
+  width: 120px; 
+  height: auto;
+  object-fit: contain;
+}

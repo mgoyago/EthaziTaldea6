@@ -23,3 +23,8 @@
     min-width: 80px;
     
 }
+#languages{
+    position: absolute;
+    z-index: 100;
+    right: 22px;
+}

@@ -9,17 +9,25 @@ import apustua from "../assets/img/icons/descarga-removebg-preview (1).png";
 import guri from "../assets/img/icons/inverted_user_icon-removebg-preview.png";
 
 interface MenuaProps {
-    setCurrentSection: (section: string) => void;  // setCurrentSection toma un string y no retorna nada
+    setCurrentSection: (section: string) => void;
+    currentLanguage: string;
   }
 
 
-function Menua({ setCurrentSection }: MenuaProps) {
+function Menua({ setCurrentSection, currentLanguage}: MenuaProps) {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
-
+    let language= [""];
+    if(currentLanguage==="eus"){
+        language= ["Hasiera","Torneoak","Jokoak","Berriak","Apustuak","Guri Buruz"];
+    }else if(currentLanguage==="es"){
+        language= ["Inicio","Torneos","Juegos","Noticias","Apuestas","Sobre Nosotros"];
+    }else if(currentLanguage==="eng"){
+        language= ["Home","Tournaments","Games","News","Bets","About Us"];
+    }
     return (
         <div className="container-fluid">
             <button 
@@ -44,27 +52,27 @@ function Menua({ setCurrentSection }: MenuaProps) {
                             <ul className="navbar-nav flex-column">
                                 <li className="nav-item d-flex mb-4 ms-2" onClick={() => setCurrentSection("home")}>
                                     <img src={hasiera} style={{height: "40px"}}/>
-                                    <a className="nav-link active text-white" aria-current="page" href="#">Hasiera</a>
+                                    <a className="nav-link active text-white" aria-current="page" href="#" onClick={toggleMenu}>{language[0]}</a>
                                 </li>
                                 <li className="nav-item d-flex mb-4 ms-2">
                                     <img src={torneoa} style={{height: "40px"}}/>
-                                    <a className="nav-link text-white" href="#">Torneoak</a>
+                                    <a className="nav-link text-white" href="#" onClick={toggleMenu}>{language[1]}</a>
                                 </li>
                                 <li className="nav-item d-flex mb-4 ms-2">
                                     <img src={jokoak} style={{height: "40px"}}/>
-                                    <a className="nav-link text-white" href="#">Jokoak</a>
+                                    <a className="nav-link text-white" href="#" onClick={toggleMenu}>{language[2]}</a>
                                 </li>
                                 <li className="nav-item d-flex mb-4 ms-2">
                                     <img src={news} style={{height: "40px"}}/>
-                                    <a className="nav-link text-white" href="#">Berriak</a>
+                                    <a className="nav-link text-white" href="#" onClick={toggleMenu}>{language[3]}</a>
                                 </li>
                                 <li className="nav-item d-flex mb-4 ms-2">
                                     <img src={apustua} style={{height: "40px"}}/>
-                                    <a className="nav-link text-white" href="#">Apustuak</a>
+                                    <a className="nav-link text-white" href="#" onClick={toggleMenu}>{language[4]}</a>
                                 </li>
                                 <li className="nav-item d-flex mb-4" style={{marginLeft: "-2px"}}  onClick={() => setCurrentSection("form")}>
                                     <img src={guri} style={{height: "30px", marginRight: "-6px"}}/>
-                                    <a className="nav-link text-white" href="#">Guri Buruz</a>
+                                    <a className="nav-link text-white" href="#" onClick={toggleMenu}>{language[5]}</a>
                                 </li>
                                 {/*<li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
