@@ -14,7 +14,7 @@ function App(){
     <>
       <Header setCurrentSection={setCurrentSection} setCurrentLanguage={setCurrentLanguage}/>
       <Menua setCurrentSection={setCurrentSection} currentLanguage={currentLanguage}/>
-      <Section currentSection={currentSection} currentLanguage={currentLanguage}/>
+      <Section currentSection={currentSection} currentLanguage={currentLanguage} setCurrentSection={setCurrentSection}/>
       <Footer/>
     </>
   );

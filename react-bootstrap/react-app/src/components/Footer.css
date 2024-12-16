@@ -1,86 +1,33 @@
-.footer-info {
-  background-color: #333;  
+.footer {
+  background-color: #000000; 
 }
-
-.footer-info h3,
-.footer-info p {
-  text-align: center;
+.sareak{
+  margin-top: 37px;
 }
-
-.footer-info .col-md-4 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 30px;
-  padding: 15px;  
-  border-right: 1px solid #444; 
-}
-
-.footer-info .col-md-4:last-child {
-  border-right: none; 
-}
-
-.footer-info ul {
-  padding-left: 0;
-  list-style: none;
-  text-align: center;
-}
-
-.footer-info ul li a {
-  color: white;
-  text-decoration: none;
-  margin-bottom: 10px;
-}
-
-.footer-info ul li a:hover {
-  text-decoration: underline;
-}
-
-.footer-info .d-flex {
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-video-container {
-  height: 50px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-}
-
-.footer-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-}
-
-.text-center {
-  text-align: center;
-}
-
-.footer-info .social-logo {
-  width: 60px; 
-  height: 60px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid white;
+.social-logo {
   transition: transform 0.3s ease;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 20px;
 }
-
-.footer-info .social-logo:hover {
+.social-logo:hover {
   transform: scale(1.1);
 }
-
-.footer-info .logo-container {
-  text-align: center;
-  margin-bottom: 15px;
+.footer-video-container {
+  position: relative;
+  overflow: hidden;
+  height: 60px;
 }
-
-.footer-info .footer-logo {
+.footer-video {
+  width: 100%;
+  height: 60px;
+  object-fit: cover;
+}
+.logo-img {
   width: 120px; 
-  height: auto;
-  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.logo-img:hover {
+  transform: scale(1.2);
 }

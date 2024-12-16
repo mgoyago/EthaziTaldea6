@@ -3,7 +3,7 @@ const translations = {
       home: ["Ongi etorri", "Hasi nabigatzen", "Ikusi"],
       form: [
         "Guri Buruz",
-        "Gu, eSports munduari buruzko informazioa eskaintzen duen webgune bat gara...",
+        "Gu, eSports munduari buruzko informazioa eskaintzen duen webgune bat gara. Gure helburua, bideo-jokoen lehiaketa eta txapelketa garrantzitsuen inguruko azken berriak eta gertakarien informazioa eskaintzea da.   Gu, eSports munduari buruzko informazioa eskaintzen duen webgune bat gara. Gure helburua, bideo-jokoen lehiaketa eta txapelketa garrantzitsuen inguruko azken berriak eta gertakarien informazioa eskaintzea da.",
         "KONTAKTATU GUREKIN",
         "Kontsulta mota",
         "Orokorra",
@@ -30,12 +30,22 @@ const translations = {
         "Ez daukazu konturik? ",
         "sortu bat emen",
       ],
+      logIn: [
+        "Erregistratu",
+        "Mesedez osatu hurrendo informazioa",
+        "Erabiltzaile-izena",
+        "Herrialdea",
+        "-- Opzio bat hautatu --",
+      ],
+      footer: [
+        
+      ],
     },
     es: {
       home: ["Bienvenido", "Empieza a navegar", "Comenzar"],
       form: [
         "Sobre Nosotros",
-        "Somos un sitio web que brinda información sobre el mundo de los eSports...",
+        "Somos un sitio web que brinda información sobre el mundo de los eSports. Nuestro objetivo es brindarle las últimas noticias e información sobre eventos sobre las principales competiciones y torneos de videojuegos.   Somos un sitio web que brinda información sobre el mundo de los eSports. Nuestro objetivo es brindarle las últimas noticias e información sobre eventos sobre las principales competiciones y torneos de videojuegos.",
         "CONTACTA CON NOSOTROS",
         "Tipo de consulta",
         "General",
@@ -48,7 +58,7 @@ const translations = {
         "Corporativo",
         "Otros",
         "Nombre",
-        "Correo electronico",
+        "Correo electrónico",
         "Mensaje",
         "Enviar",
         "QUIENES SOMOS",
@@ -56,18 +66,28 @@ const translations = {
       signIn: [
         "Iniciar Sesión",
         "Porfavor intoduzca su correo electronico y contraseña",
-        "Correo electronico",
+        "Correo electrónico",
         "Contraseña",
         "Iniciar Sesión",
         "¿No tienes una cuenta? ",
         "crea una aquí",
+      ],
+      logIn: [
+        "Registrate",
+        "Por favor complete la siguiente información",
+        "Nombre de usuario",
+        "Pais",
+        "-- Selecciona una opción --",
+      ],
+      footer: [
+        
       ],
     },
     eng: {
       home: ["Welcome", "Start searching", "Start"],
       form: [
         "About Us",
-        "We are a website that provides information about the world of eSports...",
+        "We are a website that provides information about the world of eSports. Our goal is to provide you with the latest news and event information about major video game competitions and tournaments. We are a website that provides information about the world of eSports. Our goal is to provide you with the latest news and event information about major video game competitions and tournaments. Thanks for watching this Esports page",
         "CONTACT WITH US",
         "Query type",
         "General",
@@ -94,6 +114,17 @@ const translations = {
         "Don't have an account? ",
         "create one here",
       ],
+      logIn: [
+        "Register",
+        "Please complete the following information",
+        "Username",
+        "Country",
+        "-- Select an option --",
+      ],
+      footer: [
+
+      ]
+
     },
   };
   

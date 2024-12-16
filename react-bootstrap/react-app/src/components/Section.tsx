@@ -3,13 +3,15 @@ import './Section.css';
 import Home from "./sections/Home";
 import AboutUs from "./sections/AboutUs";
 import SignIn from "./sections/SignIn";
+import LogIn from "./sections/LogIn";
 
 interface SectionProps {
   currentSection: string;
   currentLanguage: string;
+  setCurrentSection: (section: string) => void;
 }
 
-function Section({ currentSection,currentLanguage }: SectionProps) {
+function Section({ currentSection,currentLanguage,setCurrentSection }: SectionProps) {
   if (currentSection === "home") {
     return (
       <Home currentLanguage={currentLanguage}/>
@@ -18,10 +20,14 @@ function Section({ currentSection,currentLanguage }: SectionProps) {
     return (
       <AboutUs currentLanguage={currentLanguage}/>
     );
-  }else if(currentSection === "login"){
+  }else if(currentSection === "signIn"){
      return (
-      <SignIn currentLanguage={currentLanguage}/>
+      <SignIn currentLanguage={currentLanguage} setCurrentSection={setCurrentSection}/>
     );
+  }else if(currentSection === "login"){
+    return(
+    <LogIn currentLanguage={currentLanguage}/>
+  );
   }
 }
 export default Section;
