@@ -4,6 +4,7 @@ import Home from "./sections/Home";
 import AboutUs from "./sections/AboutUs";
 import SignIn from "./sections/SignIn";
 import LogIn from "./sections/LogIn";
+import Mapa from "./sections/Mapa";
 
 interface SectionProps {
   currentSection: string;
@@ -14,7 +15,7 @@ interface SectionProps {
 function Section({ currentSection,currentLanguage,setCurrentSection }: SectionProps) {
   if (currentSection === "home") {
     return (
-      <Home currentLanguage={currentLanguage}/>
+      <Home currentLanguage={currentLanguage} setCurrentSection={setCurrentSection}/>
     );
   } else if (currentSection === "form") {
     return (
@@ -28,6 +29,11 @@ function Section({ currentSection,currentLanguage,setCurrentSection }: SectionPr
     return(
     <LogIn currentLanguage={currentLanguage}/>
   );
+  }else if(currentSection === "mapa"){
+    return(
+      <Mapa/>
+    );
+    
   }
 }
 export default Section;

@@ -5,7 +5,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Section from "./components/Section";
 
-
 function App(){
   const [currentSection, setCurrentSection] = useState("home");
   const [currentLanguage, setCurrentLanguage] = useState("eus");
@@ -15,7 +14,7 @@ function App(){
       <Header setCurrentSection={setCurrentSection} setCurrentLanguage={setCurrentLanguage}/>
       <Menua setCurrentSection={setCurrentSection} currentLanguage={currentLanguage}/>
       <Section currentSection={currentSection} currentLanguage={currentLanguage} setCurrentSection={setCurrentSection}/>
-      <Footer/>
+      <Footer currentLanguage={currentLanguage}/>
     </>
   );
 }

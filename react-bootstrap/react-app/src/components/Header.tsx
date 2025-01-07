@@ -14,7 +14,7 @@ interface HeaderProps {
 
 function Header({ setCurrentSection, setCurrentLanguage }: HeaderProps) {
   const [currentLanguage, setCurrentLang] = useState<'eng' | 'es' | 'eus'>('eus'); 
-  const [userScore, setUserScore] = useState<number>(85000);
+  const [userScore] = useState<number>(0);
 
   const images: { [key in 'eng' | 'es' | 'eus']: string } = {
     eng: English,

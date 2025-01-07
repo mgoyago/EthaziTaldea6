@@ -6,9 +6,9 @@ const translations = {
         "Gu, eSports munduari buruzko informazioa eskaintzen duen webgune bat gara. Gure helburua, bideo-jokoen lehiaketa eta txapelketa garrantzitsuen inguruko azken berriak eta gertakarien informazioa eskaintzea da.   Gu, eSports munduari buruzko informazioa eskaintzen duen webgune bat gara. Gure helburua, bideo-jokoen lehiaketa eta txapelketa garrantzitsuen inguruko azken berriak eta gertakarien informazioa eskaintzea da.",
         "KONTAKTATU GUREKIN",
         "Kontsulta mota",
+        "-- Hautatu bat --",
         "Orokorra",
         "Laguntza",
-        "Besteak",
         "Enpresa",
         "Enpresa mota",
         "Hautatu",
@@ -38,6 +38,21 @@ const translations = {
         "-- Opzio bat hautatu --",
       ],
       footer: [
+
+        "SARE SOZIALAK",
+        
+        "ESTEKAK",
+        "INFORMAZIO LEGALA",
+        "KONTAKTUA",
+        "Baldintzak eta Terminoak",
+        "Pribatutasun Politika",
+        "Cookie Politika",
+        "Hasiera",
+        "Torneoak",
+        "Jokoak",
+        "Emaila",
+        "Tel.",
+        "Eskubide guztiak erreserbatuta.",
         
       ],
     },
@@ -48,9 +63,9 @@ const translations = {
         "Somos un sitio web que brinda información sobre el mundo de los eSports. Nuestro objetivo es brindarle las últimas noticias e información sobre eventos sobre las principales competiciones y torneos de videojuegos.   Somos un sitio web que brinda información sobre el mundo de los eSports. Nuestro objetivo es brindarle las últimas noticias e información sobre eventos sobre las principales competiciones y torneos de videojuegos.",
         "CONTACTA CON NOSOTROS",
         "Tipo de consulta",
+        "-- Selecciona una opción --",
         "General",
         "Ayuda",
-        "Otros",
         "Empresa",
         "Tipo de empresa",
         "Eligir",
@@ -80,6 +95,19 @@ const translations = {
         "-- Selecciona una opción --",
       ],
       footer: [
+        "REDES SOCIALES",
+        "ENLACES",
+        "INFORMACIÓN LEGAL",
+        "CONTACTO",
+        "Términos y Condiciones",
+        "Política de Privacidad",
+        "Política de Cookies",
+        "Inicio",
+        "Torneos",
+        "Juegos",
+        "Correo ",
+        "Teléfono",
+        "Todos los derechos reservados.",
         
       ],
     },
@@ -90,9 +118,9 @@ const translations = {
         "We are a website that provides information about the world of eSports. Our goal is to provide you with the latest news and event information about major video game competitions and tournaments. We are a website that provides information about the world of eSports. Our goal is to provide you with the latest news and event information about major video game competitions and tournaments. Thanks for watching this Esports page",
         "CONTACT WITH US",
         "Query type",
+        "-- Select one --",
         "General",
         "Help",
-        "Others",
         "Company",
         "Type of company",
         "Select",
@@ -123,6 +151,20 @@ const translations = {
       ],
       footer: [
 
+        "SOCIAL NETWORKS",
+        "LINKS",
+        "LEGAL INFORMATION",
+        "CONTACT",
+        "Terms and Conditions",
+        "Privacy Policy",
+        "Cookies Policy",
+        "Home",
+        "Tournaments",
+        "Games",
+        "Email",
+        "Phone",
+        "All rights reserved.",
+
       ]
 
     },
@@ -130,3 +172,5 @@ const translations = {
   
   export default translations;
   
+
+

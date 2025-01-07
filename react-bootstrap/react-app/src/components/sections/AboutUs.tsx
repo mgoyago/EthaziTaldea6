@@ -17,20 +17,20 @@ function AboutUs({currentLanguage}:AboutUsProps){
     mensaje: '',
   });
   
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value, // Asegura que el valor cambie dinámicamente según el campo
-    });
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
   };
 
   const handleSubmit = async (e: any) => {
       e.preventDefault();
 
       try {
-          const response = await axios.post('http://127.0.0.1:8000/api/send-email', formData);
-          alert(response.data.success);
+          await axios.post('http://127.0.0.1:8000/api/send-email', formData);
+          console.log('Correo enviado correctamente');
       } catch (error) {
           console.error('Error al enviar el correo', error);
           alert('Hubo un error al enviar el correo.');
@@ -70,8 +70,8 @@ function AboutUs({currentLanguage}:AboutUsProps){
                   <option value="" disabled>
                     {language.form[4]}
                   </option>
-                  <option value="orokorra">{language.form[5]}</option>
-                  <option value="laguntza">{language.form[6]}</option>
+                  <option value="Orokorra">{language.form[5]}</option>
+                  <option value="Laguntza">{language.form[6]}</option>
                 </select>
               </div>
 
@@ -99,7 +99,7 @@ function AboutUs({currentLanguage}:AboutUsProps){
                 </label>
                 <textarea
                   id="mezua"
-                  name="mensaje" // Asegúrate de que coincida con "mensaje" en formData
+                  name="mensaje"
                   className="form-control input-pertsonalizatua"
                   rows={4}
                   placeholder="Idatzi hemen"
