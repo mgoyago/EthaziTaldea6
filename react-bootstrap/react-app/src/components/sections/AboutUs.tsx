@@ -29,7 +29,7 @@ function AboutUs({currentLanguage}:AboutUsProps){
       e.preventDefault();
 
       try {
-          await axios.post('http://127.0.0.1:8000/api/send-email', formData);
+          await axios.post('/api/send-email', formData);
           console.log('Correo enviado correctamente');
       } catch (error) {
           console.error('Error al enviar el correo', error);

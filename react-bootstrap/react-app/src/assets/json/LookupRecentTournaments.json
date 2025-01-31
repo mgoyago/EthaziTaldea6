@@ -1,0 +1,1002 @@
+[
+  {
+    "TournamentId": 71649,
+    "GameId": 746,
+    "TournamentName": "KillerPigeon's Midweek Muster #8",
+    "StartDate": "2025-01-03",
+    "EndDate": "2025-01-09",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "300.00"
+  },
+  {
+    "TournamentId": 71647,
+    "GameId": 746,
+    "TournamentName": "CIS Cup 15: Power of Teamship",
+    "StartDate": "2024-12-29",
+    "EndDate": "2025-01-08",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "466.22"
+  },
+  {
+    "TournamentId": 71646,
+    "GameId": 179,
+    "TournamentName": "Coupe de France 2024",
+    "StartDate": "2024-11-18",
+    "EndDate": "2025-01-08",
+    "Location": "France",
+    "Teamplay": 0,
+    "TotalUSDPrize": "147.44"
+  },
+  {
+    "TournamentId": 71644,
+    "GameId": 179,
+    "TournamentName": "Dark vs Barles Bo7 Showmatch",
+    "StartDate": "2025-01-08",
+    "EndDate": "2025-01-08",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "150.00"
+  },
+  {
+    "TournamentId": 71639,
+    "GameId": 151,
+    "TournamentName": "OlimoLeague Week #235",
+    "StartDate": "2025-01-07",
+    "EndDate": "2025-01-07",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "273.73"
+  },
+  {
+    "TournamentId": 71635,
+    "GameId": 510,
+    "TournamentName": "H\u00e0 N\u1ed9i Open 12: 2v2 Random",
+    "StartDate": "2025-01-04",
+    "EndDate": "2025-01-05",
+    "Location": "Hanoi, Vietnam",
+    "Teamplay": 1,
+    "TotalUSDPrize": "3775.83"
+  },
+  {
+    "TournamentId": 71632,
+    "GameId": 179,
+    "TournamentName": "Make DarkSidE Great Again 2",
+    "StartDate": "2025-01-05",
+    "EndDate": "2025-01-05",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "100.00"
+  },
+  {
+    "TournamentId": 71631,
+    "GameId": 179,
+    "TournamentName": "The Garrison Main Event: Qualifier",
+    "StartDate": "2025-01-04",
+    "EndDate": "2025-01-05",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "4000.00"
+  },
+  {
+    "TournamentId": 71605,
+    "GameId": 178,
+    "TournamentName": "EricBR vs TheRapl Bo7 Showmatch",
+    "StartDate": "2025-01-04",
+    "EndDate": "2025-01-04",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "80.00"
+  },
+  {
+    "TournamentId": 71610,
+    "GameId": 638,
+    "TournamentName": "Huashan Sword Cup #5",
+    "StartDate": "2025-01-03",
+    "EndDate": "2025-01-04",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "2870.70"
+  },
+  {
+    "TournamentId": 71599,
+    "GameId": 179,
+    "TournamentName": "Rusaoc Cup 150: Final of the Year 2024",
+    "StartDate": "2025-01-02",
+    "EndDate": "2025-01-03",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "918.93"
+  },
+  {
+    "TournamentId": 71581,
+    "GameId": 872,
+    "TournamentName": "HC Premium Cup #07",
+    "StartDate": "2025-01-02",
+    "EndDate": "2025-01-02",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "20.00"
+  },
+  {
+    "TournamentId": 71563,
+    "GameId": 179,
+    "TournamentName": "LingYuan Invitational 2",
+    "StartDate": "2025-01-02",
+    "EndDate": "2025-01-02",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "900.00"
+  },
+  {
+    "TournamentId": 71614,
+    "GameId": 839,
+    "TournamentName": "New Year Lottery Cup",
+    "StartDate": "2024-12-31",
+    "EndDate": "2025-01-02",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "10958.40"
+  },
+  {
+    "TournamentId": 71583,
+    "GameId": 762,
+    "TournamentName": "Major Proleague: January 1, 2025",
+    "StartDate": "2025-01-01",
+    "EndDate": "2025-01-01",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "20133.92"
+  },
+  {
+    "TournamentId": 71570,
+    "GameId": 872,
+    "TournamentName": "PGR New Year Live",
+    "StartDate": "2025-01-01",
+    "EndDate": "2025-01-01",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "90.00"
+  },
+  {
+    "TournamentId": 71556,
+    "GameId": 762,
+    "TournamentName": "YHtv Championship of China 2024",
+    "StartDate": "2024-12-31",
+    "EndDate": "2025-01-01",
+    "Location": "Shanghai",
+    "Teamplay": 0,
+    "TotalUSDPrize": "4912.04"
+  },
+  {
+    "TournamentId": 71557,
+    "GameId": 179,
+    "TournamentName": "Hera vs Vivi Bo7 Showmatch (2024-12-31)",
+    "StartDate": "2024-12-31",
+    "EndDate": "2024-12-31",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "700.00"
+  },
+  {
+    "TournamentId": 71552,
+    "GameId": 762,
+    "TournamentName": "Major Proleague: December 31, 2024",
+    "StartDate": "2024-12-31",
+    "EndDate": "2024-12-31",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "7932.71"
+  },
+  {
+    "TournamentId": 71535,
+    "GameId": 409,
+    "TournamentName": "Saudi eLeague 2024 - Championship (RL)",
+    "StartDate": "2024-12-29",
+    "EndDate": "2024-12-31",
+    "Location": "Riyadh, Saudi Arabia",
+    "Teamplay": 1,
+    "TotalUSDPrize": "100000.01"
+  },
+  {
+    "TournamentId": 71628,
+    "GameId": 547,
+    "TournamentName": "Titled Tuesday December 31, 2024 Early Tournament",
+    "StartDate": "2024-12-31",
+    "EndDate": "2024-12-31",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "2500.00"
+  },
+  {
+    "TournamentId": 71629,
+    "GameId": 547,
+    "TournamentName": "Titled Tuesday December 31, 2024 Late Tournament",
+    "StartDate": "2024-12-31",
+    "EndDate": "2024-12-31",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "2500.00"
+  },
+  {
+    "TournamentId": 71531,
+    "GameId": 179,
+    "TournamentName": "Hera vs Jibatong Bo7 Showmatch",
+    "StartDate": "2024-12-30",
+    "EndDate": "2024-12-30",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "700.00"
+  },
+  {
+    "TournamentId": 71530,
+    "GameId": 746,
+    "TournamentName": "KillerPigeon's Midweek Muster All-Stars",
+    "StartDate": "2024-12-27",
+    "EndDate": "2024-12-30",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "300.00"
+  },
+  {
+    "TournamentId": 71574,
+    "GameId": 872,
+    "TournamentName": "#2 Mystic Journey",
+    "StartDate": "2024-12-29",
+    "EndDate": "2024-12-29",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "30.00"
+  },
+  {
+    "TournamentId": 71573,
+    "GameId": 872,
+    "TournamentName": "#2 TCGP Brazil Amazon Cup",
+    "StartDate": "2024-12-29",
+    "EndDate": "2024-12-29",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "48.42"
+  },
+  {
+    "TournamentId": 71571,
+    "GameId": 872,
+    "TournamentName": "COPA BLAINE #5 NO-EX",
+    "StartDate": "2024-12-29",
+    "EndDate": "2024-12-29",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "10.00"
+  },
+  {
+    "TournamentId": 71537,
+    "GameId": 164,
+    "TournamentName": "Demacia Cup 2024",
+    "StartDate": "2024-12-16",
+    "EndDate": "2024-12-29",
+    "Location": "Shanghai",
+    "Teamplay": 1,
+    "TotalUSDPrize": "68500.00"
+  },
+  {
+    "TournamentId": 71553,
+    "GameId": 638,
+    "TournamentName": "Don't Force Me Cup - 2024 Finals",
+    "StartDate": "2024-12-22",
+    "EndDate": "2024-12-29",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "24386.00"
+  },
+  {
+    "TournamentId": 71529,
+    "GameId": 746,
+    "TournamentName": "Forged in Steel",
+    "StartDate": "2024-12-21",
+    "EndDate": "2024-12-29",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "10000.00"
+  },
+  {
+    "TournamentId": 71575,
+    "GameId": 872,
+    "TournamentName": "GAMERS CLASH #1",
+    "StartDate": "2024-12-29",
+    "EndDate": "2024-12-29",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "3.45"
+  },
+  {
+    "TournamentId": 71576,
+    "GameId": 872,
+    "TournamentName": "Kuyo Cup Pocket #2",
+    "StartDate": "2024-12-29",
+    "EndDate": "2024-12-29",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "197.30"
+  },
+  {
+    "TournamentId": 71528,
+    "GameId": 179,
+    "TournamentName": "LingYuan Invitational 1",
+    "StartDate": "2024-12-29",
+    "EndDate": "2024-12-29",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "900.00"
+  },
+  {
+    "TournamentId": 71617,
+    "GameId": 839,
+    "TournamentName": "Myskill New Year Cup",
+    "StartDate": "2024-12-28",
+    "EndDate": "2024-12-29",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "1500.00"
+  },
+  {
+    "TournamentId": 71572,
+    "GameId": 872,
+    "TournamentName": "Pocket Aces Turbo Weekly #2",
+    "StartDate": "2024-12-29",
+    "EndDate": "2024-12-29",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "10.00"
+  },
+  {
+    "TournamentId": 71577,
+    "GameId": 872,
+    "TournamentName": "Pocket Legends League #13",
+    "StartDate": "2024-12-28",
+    "EndDate": "2024-12-29",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "50.00"
+  },
+  {
+    "TournamentId": 71580,
+    "GameId": 872,
+    "TournamentName": "Ursiiday's Pocket Weekly #9",
+    "StartDate": "2024-12-28",
+    "EndDate": "2024-12-29",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "400.00"
+  },
+  {
+    "TournamentId": 71578,
+    "GameId": 872,
+    "TournamentName": "Year-Ender: Mythical Island Showdown",
+    "StartDate": "2024-12-28",
+    "EndDate": "2024-12-28",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "50.00"
+  },
+  {
+    "TournamentId": 71483,
+    "GameId": 179,
+    "TournamentName": "Clown Christmas Championship",
+    "StartDate": "2024-11-24",
+    "EndDate": "2024-12-27",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "109.40"
+  },
+  {
+    "TournamentId": 71642,
+    "GameId": 231,
+    "TournamentName": "European Pro League Season 22",
+    "StartDate": "2024-12-11",
+    "EndDate": "2024-12-27",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "20000.00"
+  },
+  {
+    "TournamentId": 71565,
+    "GameId": 872,
+    "TournamentName": "FoxCave Holiday Tournament ( NoEX )",
+    "StartDate": "2024-12-27",
+    "EndDate": "2024-12-27",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "35.00"
+  },
+  {
+    "TournamentId": 71564,
+    "GameId": 872,
+    "TournamentName": "HC Duos World Cup Qualifier #02",
+    "StartDate": "2024-12-27",
+    "EndDate": "2024-12-27",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "20.00"
+  },
+  {
+    "TournamentId": 71579,
+    "GameId": 872,
+    "TournamentName": "Little Legends League #10",
+    "StartDate": "2024-12-27",
+    "EndDate": "2024-12-27",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "100.00"
+  },
+  {
+    "TournamentId": 71498,
+    "GameId": 510,
+    "TournamentName": "Thi\u00ean Kh\u00f4i Cup 2024 #3: 1v1 Random - Series A",
+    "StartDate": "2024-12-16",
+    "EndDate": "2024-12-27",
+    "Location": "Online/Offline",
+    "Teamplay": 0,
+    "TotalUSDPrize": "5956.35"
+  },
+  {
+    "TournamentId": 71497,
+    "GameId": 179,
+    "TournamentName": "Wonders vs DarkSidE Showmatch",
+    "StartDate": "2024-12-27",
+    "EndDate": "2024-12-27",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "100.00"
+  },
+  {
+    "TournamentId": 71567,
+    "GameId": 872,
+    "TournamentName": "HC Premium Cup #05",
+    "StartDate": "2024-12-26",
+    "EndDate": "2024-12-26",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "35.00"
+  },
+  {
+    "TournamentId": 71566,
+    "GameId": 872,
+    "TournamentName": "Nalu's Cup",
+    "StartDate": "2024-12-26",
+    "EndDate": "2024-12-26",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "8.07"
+  },
+  {
+    "TournamentId": 71568,
+    "GameId": 872,
+    "TournamentName": "Pocket Pandemonium #6! HOLIDAY SPECIAL",
+    "StartDate": "2024-12-26",
+    "EndDate": "2024-12-26",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "100.00"
+  },
+  {
+    "TournamentId": 71569,
+    "GameId": 872,
+    "TournamentName": "Copa Guapo Meowth #2",
+    "StartDate": "2024-12-25",
+    "EndDate": "2024-12-25",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "5.00"
+  },
+  {
+    "TournamentId": 71549,
+    "GameId": 839,
+    "TournamentName": "United21 Season 24",
+    "StartDate": "2024-12-08",
+    "EndDate": "2024-12-25",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "10000.00"
+  },
+  {
+    "TournamentId": 71630,
+    "GameId": 151,
+    "TournamentName": "WardiTV Christmas Day Games 2024",
+    "StartDate": "2024-12-25",
+    "EndDate": "2024-12-25",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "2000.00"
+  },
+  {
+    "TournamentId": 71558,
+    "GameId": 839,
+    "TournamentName": "European Pro League Season 23: Division 2 (CS2)",
+    "StartDate": "2024-12-07",
+    "EndDate": "2024-12-24",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "10000.00"
+  },
+  {
+    "TournamentId": 71445,
+    "GameId": 151,
+    "TournamentName": "OlimoLeague December 2024",
+    "StartDate": "2024-12-24",
+    "EndDate": "2024-12-24",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "1032.00"
+  },
+  {
+    "TournamentId": 71626,
+    "GameId": 547,
+    "TournamentName": "Titled Tuesday December 24, 2024 Early Tournament",
+    "StartDate": "2024-12-24",
+    "EndDate": "2024-12-24",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "2500.00"
+  },
+  {
+    "TournamentId": 71627,
+    "GameId": 547,
+    "TournamentName": "Titled Tuesday December 24, 2024 Late Tournament",
+    "StartDate": "2024-12-24",
+    "EndDate": "2024-12-24",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "2500.00"
+  },
+  {
+    "TournamentId": 71418,
+    "GameId": 839,
+    "TournamentName": "Galaxy Battle #5",
+    "StartDate": "2024-12-16",
+    "EndDate": "2024-12-23",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "20000.00"
+  },
+  {
+    "TournamentId": 71468,
+    "GameId": 409,
+    "TournamentName": "Offseason Open - 3v3: APAC",
+    "StartDate": "2024-12-22",
+    "EndDate": "2024-12-23",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "16800.00"
+  },
+  {
+    "TournamentId": 71518,
+    "GameId": 409,
+    "TournamentName": "Offseason Open - 3v3: EU",
+    "StartDate": "2024-12-21",
+    "EndDate": "2024-12-23",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "39300.00"
+  },
+  {
+    "TournamentId": 71648,
+    "GameId": 409,
+    "TournamentName": "Offseason Open - 3v3: MENA",
+    "StartDate": "2024-12-21",
+    "EndDate": "2024-12-23",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "21600.00"
+  },
+  {
+    "TournamentId": 71582,
+    "GameId": 409,
+    "TournamentName": "Offseason Open - 3v3: NA",
+    "StartDate": "2024-12-21",
+    "EndDate": "2024-12-23",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "39300.00"
+  },
+  {
+    "TournamentId": 71437,
+    "GameId": 409,
+    "TournamentName": "Offseason Open - 3v3: OCE",
+    "StartDate": "2024-12-22",
+    "EndDate": "2024-12-23",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "21600.00"
+  },
+  {
+    "TournamentId": 71532,
+    "GameId": 409,
+    "TournamentName": "Offseason Open - 3v3: SAM",
+    "StartDate": "2024-12-21",
+    "EndDate": "2024-12-23",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "21300.00"
+  },
+  {
+    "TournamentId": 71523,
+    "GameId": 534,
+    "TournamentName": "Piz Cup: December 2024",
+    "StartDate": "2024-12-23",
+    "EndDate": "2024-12-23",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "10000.00"
+  },
+  {
+    "TournamentId": 71384,
+    "GameId": 872,
+    "TournamentName": "#1 Mystic Journey",
+    "StartDate": "2024-12-22",
+    "EndDate": "2024-12-22",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "15.00"
+  },
+  {
+    "TournamentId": 71383,
+    "GameId": 872,
+    "TournamentName": "#1 TCGP Brazil Amazon Cup",
+    "StartDate": "2024-12-22",
+    "EndDate": "2024-12-22",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "31.22"
+  },
+  {
+    "TournamentId": 71435,
+    "GameId": 231,
+    "TournamentName": "1win Series Dota 2 Punch",
+    "StartDate": "2024-12-21",
+    "EndDate": "2024-12-22",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "30000.00"
+  },
+  {
+    "TournamentId": 71511,
+    "GameId": 859,
+    "TournamentName": "Aureil Stormgate Tournament Invitational #2",
+    "StartDate": "2024-12-21",
+    "EndDate": "2024-12-22",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "600.00"
+  },
+  {
+    "TournamentId": 71389,
+    "GameId": 762,
+    "TournamentName": "Bombastic StarLeague 19",
+    "StartDate": "2024-11-01",
+    "EndDate": "2024-12-22",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "5000.00"
+  },
+  {
+    "TournamentId": 71491,
+    "GameId": 534,
+    "TournamentName": "Chapter 6 Season 1: Solo Cash Cup - Week 2: EU",
+    "StartDate": "2024-12-22",
+    "EndDate": "2024-12-22",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "32000.00"
+  },
+  {
+    "TournamentId": 71611,
+    "GameId": 837,
+    "TournamentName": "CPT 2024 World Warrior: Europe West Regional Final",
+    "StartDate": "2024-12-22",
+    "EndDate": "2024-12-22",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "6951.00"
+  },
+  {
+    "TournamentId": 71602,
+    "GameId": 839,
+    "TournamentName": "Gameinside.ua ROG Winter Cup 2024",
+    "StartDate": "2024-12-22",
+    "EndDate": "2024-12-22",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "1675.80"
+  },
+  {
+    "TournamentId": 71381,
+    "GameId": 872,
+    "TournamentName": "NHKorru Community Tournament",
+    "StartDate": "2024-12-22",
+    "EndDate": "2024-12-22",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "100.00"
+  },
+  {
+    "TournamentId": 71386,
+    "GameId": 179,
+    "TournamentName": "Noble Apartment Cup",
+    "StartDate": "2024-12-15",
+    "EndDate": "2024-12-22",
+    "Location": "Berlin, Germany",
+    "Teamplay": 0,
+    "TotalUSDPrize": "50637.00"
+  },
+  {
+    "TournamentId": 71377,
+    "GameId": 872,
+    "TournamentName": "Pocket Aces Turbo Weekly",
+    "StartDate": "2024-12-22",
+    "EndDate": "2024-12-22",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "10.00"
+  },
+  {
+    "TournamentId": 71380,
+    "GameId": 872,
+    "TournamentName": "Pocket Champions Showdown",
+    "StartDate": "2024-12-21",
+    "EndDate": "2024-12-22",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "120.00"
+  },
+  {
+    "TournamentId": 71366,
+    "GameId": 872,
+    "TournamentName": "Pocket Legends League #12",
+    "StartDate": "2024-12-21",
+    "EndDate": "2024-12-22",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "50.00"
+  },
+  {
+    "TournamentId": 71365,
+    "GameId": 872,
+    "TournamentName": "Poke League Singleton",
+    "StartDate": "2024-12-03",
+    "EndDate": "2024-12-22",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "104.29"
+  },
+  {
+    "TournamentId": 71613,
+    "GameId": 504,
+    "TournamentName": "PUBG Global Championship 2024",
+    "StartDate": "2024-12-09",
+    "EndDate": "2024-12-22",
+    "Location": "Kuala Lumpur, Malaysia",
+    "Teamplay": 1,
+    "TotalUSDPrize": "1500000.00"
+  },
+  {
+    "TournamentId": 71604,
+    "GameId": 409,
+    "TournamentName": "Rival Rush Season 1: Split 1 - Division 2",
+    "StartDate": "2024-10-14",
+    "EndDate": "2024-12-22",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "328.51"
+  },
+  {
+    "TournamentId": 71379,
+    "GameId": 872,
+    "TournamentName": "Set A1a Intro Clash",
+    "StartDate": "2024-12-22",
+    "EndDate": "2024-12-22",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "35.00"
+  },
+  {
+    "TournamentId": 71364,
+    "GameId": 761,
+    "TournamentName": "SNK Championship Series 2024 Finals",
+    "StartDate": "2024-12-21",
+    "EndDate": "2024-12-22",
+    "Location": "Shanghai",
+    "Teamplay": 0,
+    "TotalUSDPrize": "41100.00"
+  },
+  {
+    "TournamentId": 71410,
+    "GameId": 792,
+    "TournamentName": "SOOP Overwatch Cup Korea - Season 2",
+    "StartDate": "2024-12-11",
+    "EndDate": "2024-12-22",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "20760.00"
+  },
+  {
+    "TournamentId": 71385,
+    "GameId": 179,
+    "TournamentName": "T90 Titans League 4: Silver League",
+    "StartDate": "2024-12-01",
+    "EndDate": "2024-12-22",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "2200.00"
+  },
+  {
+    "TournamentId": 71368,
+    "GameId": 872,
+    "TournamentName": "Tournament Pokemon TCG Pocket Indonesia 3",
+    "StartDate": "2024-12-22",
+    "EndDate": "2024-12-22",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "24.59"
+  },
+  {
+    "TournamentId": 71376,
+    "GameId": 872,
+    "TournamentName": "Ursiiday's Pocket Weekly #8",
+    "StartDate": "2024-12-21",
+    "EndDate": "2024-12-22",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "400.00"
+  },
+  {
+    "TournamentId": 71419,
+    "GameId": 839,
+    "TournamentName": "Wildz Invitational",
+    "StartDate": "2024-12-21",
+    "EndDate": "2024-12-22",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "26075.51"
+  },
+  {
+    "TournamentId": 71387,
+    "GameId": 178,
+    "TournamentName": "Wrath Of The Gods",
+    "StartDate": "2024-12-16",
+    "EndDate": "2024-12-22",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "13100.00"
+  },
+  {
+    "TournamentId": 71382,
+    "GameId": 872,
+    "TournamentName": "#04 KGEN League",
+    "StartDate": "2024-12-21",
+    "EndDate": "2024-12-21",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "58.34"
+  },
+  {
+    "TournamentId": 71484,
+    "GameId": 534,
+    "TournamentName": "Chapter 6 Season 1: FNCS Divisional Cup - Week 2: EU",
+    "StartDate": "2024-12-21",
+    "EndDate": "2024-12-21",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "90000.00"
+  },
+  {
+    "TournamentId": 71512,
+    "GameId": 534,
+    "TournamentName": "Chapter 6 Season 1: FNCS Divisional Cup - Week 2: NAC",
+    "StartDate": "2024-12-21",
+    "EndDate": "2024-12-21",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "60000.00"
+  },
+  {
+    "TournamentId": 71369,
+    "GameId": 872,
+    "TournamentName": "COPA MEW",
+    "StartDate": "2024-12-21",
+    "EndDate": "2024-12-21",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "5.00"
+  },
+  {
+    "TournamentId": 71612,
+    "GameId": 837,
+    "TournamentName": "CPT 2024 World Warrior: Europe North-East Regional Final",
+    "StartDate": "2024-12-21",
+    "EndDate": "2024-12-21",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "7050.00"
+  },
+  {
+    "TournamentId": 71509,
+    "GameId": 874,
+    "TournamentName": "ESportsBattle Christmas Cup",
+    "StartDate": "2024-12-21",
+    "EndDate": "2024-12-21",
+    "Location": "Sofia, Bulgaria",
+    "Teamplay": 0,
+    "TotalUSDPrize": "1043.00"
+  },
+  {
+    "TournamentId": 71373,
+    "GameId": 179,
+    "TournamentName": "GB Hidden Cup 3",
+    "StartDate": "2024-11-17",
+    "EndDate": "2024-12-21",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "2514.15"
+  },
+  {
+    "TournamentId": 71533,
+    "GameId": 179,
+    "TournamentName": "House of Aquarius 2",
+    "StartDate": "2024-11-02",
+    "EndDate": "2024-12-21",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "97.88"
+  },
+  {
+    "TournamentId": 71501,
+    "GameId": 869,
+    "TournamentName": "Leon Masters: Deadlock",
+    "StartDate": "2024-12-17",
+    "EndDate": "2024-12-21",
+    "Location": "Online",
+    "Teamplay": 1,
+    "TotalUSDPrize": "10000.00"
+  },
+  {
+    "TournamentId": 71367,
+    "GameId": 872,
+    "TournamentName": "Pok\u00e9mon Pocket NOEX Frenzy #4",
+    "StartDate": "2024-12-21",
+    "EndDate": "2024-12-21",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "20.00"
+  },
+  {
+    "TournamentId": 71372,
+    "GameId": 179,
+    "TournamentName": "Rusaoc Cup 149",
+    "StartDate": "2024-12-21",
+    "EndDate": "2024-12-21",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "97.14"
+  },
+  {
+    "TournamentId": 71407,
+    "GameId": 628,
+    "TournamentName": "CTL Season 27",
+    "StartDate": "2024-10-13",
+    "EndDate": "2024-12-20",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "2000.70"
+  },
+  {
+    "TournamentId": 71324,
+    "GameId": 179,
+    "TournamentName": "Founders Legacy Cup",
+    "StartDate": "2024-11-11",
+    "EndDate": "2024-12-20",
+    "Location": "Online",
+    "Teamplay": 0,
+    "TotalUSDPrize": "120.00"
+  }
+]

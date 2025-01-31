@@ -1,20 +1,22 @@
 import './Header.css';
-import { useState } from 'react';
+import { useState} from 'react';
 import Logo from '../assets/img/LogoBlanco.png';
 import User from '../assets/img/user-removebg-preview.png';
 import Lupa from '../assets/img/lupa-removebg-preview.png';
 import English from '../assets/img/languages/eng-removebg-preview (1).png';
 import Español from '../assets/img/languages/españa-removebg-preview.png';
 import Euskera from '../assets/img/languages/eusk-removebg-preview.png';
+import axios from 'axios';
 
 interface HeaderProps {
   setCurrentSection: (section: string) => void;
   setCurrentLanguage: (language: string) => void;
+  loged: string;
 }
 
-function Header({ setCurrentSection, setCurrentLanguage }: HeaderProps) {
+function Header({ setCurrentSection, setCurrentLanguage, loged }: HeaderProps) {
   const [currentLanguage, setCurrentLang] = useState<'eng' | 'es' | 'eus'>('eus'); 
-  const [userScore] = useState<number>(0);
+  const [userScore, setuserScore] = useState<number>(0);
 
   const images: { [key in 'eng' | 'es' | 'eus']: string } = {
     eng: English,
@@ -29,19 +31,65 @@ function Header({ setCurrentSection, setCurrentLanguage }: HeaderProps) {
     setCurrentLanguage(selectedLang);
   };
 
+  
+  
+    const fetchUserPoints = async () => {
+      try {
+        const token = localStorage.getItem('token');
+        const response = await axios.get('/api/datuak', {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+        console.log('Respuesta del servidor:', response.data); 
+        setuserScore(response.data.points); 
+      } catch (err) {
+        console.error('Error al recoger datos', err);
+        alert('Error al recoger datos');
+      }
+    };
+  
+  
   return (
     <div>
       <header
-        className="header bg-black text-white px-5 position-absolute w-100 d-grid align-items-center overflow-hidden z-1"
-        style={{ height: '80px', gridTemplateColumns: 'repeat(12, 1fr)' }}
-      >
+        className="header bg-black text-white px-5 position-absolute w-100 d-grid align-items-center overflow-hidden z-1 border-bottom"
+        style={{ height: '80px', gridTemplateColumns: 'repeat(12, 1fr)', borderColor: 'white' }}
+      >  {loged === "bai" ? (
+        <>
+          <div className="nav-item d-flex align-items-center user-all" style={{ gridColumn: '2 / span 2'}}>
+            <img 
+              src={User} 
+              alt="User Icon" 
+              className="nav-image user-size h-auto" 
+              onClick={() => setCurrentSection("perfil")} 
+            />
+            
+            <div 
+              className="user-info ms-3 bg-danger" 
+              onClick={() => fetchUserPoints()}
+            >
+              <span className="score-label">PT: {userScore}</span>
+            </div>
+          </div>
+        </>
+      ) : (
         <div className="nav-item d-flex align-items-center user-all" style={{ gridColumn: '2 / span 2'}}>
-          <img src={User} alt="User Icon" className="nav-image user-size h-auto" onClick={()=>setCurrentSection("signIn")}/>
+          <img 
+            src={User} 
+            alt="User Icon" 
+            className="nav-image user-size h-auto" 
+            onClick={() => setCurrentSection("signIn")} 
+          />
           
-          <div className="user-info ms-3 bg-danger">
+          <div 
+            className="user-info ms-3 bg-danger" 
+            onClick={() => fetchUserPoints()}
+          >
             <span className="score-label">PT: {userScore}</span>
           </div>
         </div>
+      )}
         <div
           className="nav-item d-flex align-items-center justify-content-center"
           style={{ gridColumn: '6 / span 2' }}

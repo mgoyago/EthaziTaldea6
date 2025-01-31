@@ -12,7 +12,6 @@ interface LogInProps {
 function LogIn({ currentLanguage }: LogInProps) {
   const language = translations[currentLanguage];
 
-  // Estados para los campos del formulario
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,25 +20,22 @@ function LogIn({ currentLanguage }: LogInProps) {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
 
-  // Manejar el cambio de país
   const handleChangeCountry = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedCountry(event.target.value);
   };
 
-  // Manejar el envío del formulario
   const handleRegister = async (event: React.FormEvent) => {
-    event.preventDefault(); // Evitar que el formulario recargue la página
+    event.preventDefault();
     setError("");
     setSuccess(false);
 
-    // Validar que el país está seleccionado
     if (!selectedCountry) {
       setError("Por favor, selecciona un país.");
       return;
     }
 
     try {
-      const response = await axios.post("http://127.0.0.1:8000/api/register", {
+      const response = await axios.post("/api/register", {
         name,
         email,
         password,
@@ -47,18 +43,15 @@ function LogIn({ currentLanguage }: LogInProps) {
         country: selectedCountry,
       });
 
-      // Si el registro es exitoso
       console.log("Usuario registrado:", response.data);
       setSuccess(true);
 
-      // Opcional: Redirigir a otra sección o limpiar el formulario
       setName("");
       setEmail("");
       setPassword("");
       setPasswordConfirmation("");
       setSelectedCountry("");
     } catch (err: any) {
-      // Manejar errores del servidor
       if (err.response && err.response.data) {
         setError(err.response.data.message || "Error al registrarse.");
       } else {

@@ -6,9 +6,12 @@ import axios from "axios";
 interface SignInProps {
   currentLanguage: string;
   setCurrentSection: (section: string) => void;
+  setCurrentRol: (section: string) => void;
+  setLoged: (section: string) => void;
 }
 
-function SignIn({ currentLanguage, setCurrentSection }: SignInProps) {
+
+function SignIn({ currentLanguage, setCurrentSection, setCurrentRol, setLoged }: SignInProps) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -19,7 +22,7 @@ function SignIn({ currentLanguage, setCurrentSection }: SignInProps) {
     setError("");
 
     try {
-      const response = await axios.post("http://127.0.0.1:8000/api/login", { email, password });
+      const response = await axios.post("/api/login", { email, password });
       const { token, user } = response.data;
 
       // Almacenar el token en localStorage o sesión
@@ -27,9 +30,13 @@ function SignIn({ currentLanguage, setCurrentSection }: SignInProps) {
 
       console.log("Usuario autenticado:", user);
 
+      console.log(user.rol);
+
+      setCurrentRol(user.rol);
+      setLoged("bai");
+
       setCurrentSection("home");
     } catch (err: any) {
-      // Manejar errores
       if (err.response && err.response.data) {
         setError(err.response.data.message || "Login failed");
       } else {
