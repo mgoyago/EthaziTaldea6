@@ -1,0 +1,26 @@
+version: '3.8'  # Agrega la versión para compatibilidad
+
+services:
+  mariadb:
+    container_name: db
+    image: mariadb:10.9
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mydatabase
+    volumes:
+      - mysqldata:/var/lib/mysql
+
+  adminer:
+    image: adminer:latest
+    container_name: adminer
+    restart: always
+    environment:
+      ADMINER_DEFAULT_SERVER: db
+    ports:
+      - "7777:8080"
+
+volumes:
+  mysqldata:  # Definir el volumen en la raíz

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"; 
+import { useEffect, useRef, useState } from "react";
 import L from "leaflet";
 
 import OverWatch from "../../assets/img/marcador/OverwatchMarcador.png";
@@ -8,15 +8,28 @@ import LOL from "../../assets/img/marcador/LolMarcador.png";
 import fifa from "../../assets/img/marcador/EAsportsMarcador.png";
 import rocket from "../../assets/img/marcador/RocketLeagueMarcador.png";
 
- 
+interface SectionProps {
+  currentSection: string;
+  currentLanguage: string;
+  loged: string;
+  currentRol: string; // Definimos currentRol como string explícitamente
+  setCurrentSection: (section: string) => void;
+  setCurrentRol: (section: string) => void;
+  setuserScore: (section: number) => void;
+  setLoged: (section: string) => void;
+}
 
+// Añadimos una interfaz para definir los tipos en el componente Mapa
+interface MapaProps {
+  currentRol: string; // Definimos currentRol como string explícitamente
+}
 
-const Mapa = () => {
+function Mapa({ currentRol }: MapaProps) {
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<L.Map | null>(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
+  const [tags, setTags] = useState<{ coords: [number, number]; icon: string; info: string; title: string; date: string; capacity: string; imgUrl: string; marker?: L.Marker }[]>([]);
 
   const countries = [
     { name: "España", coords: [40.463667, -3.74922] as [number, number] },
@@ -42,8 +55,6 @@ const Mapa = () => {
     { name: "Malasia", coords: [4.210484, 101.975766] as [number, number] },
     { name: "Vietnam", coords: [14.058324, 108.277199] as [number, number] },
   ];
-  
-
 
   useEffect(() => {
     if (!mapRef.current && mapContainerRef.current) {
@@ -73,6 +84,7 @@ const Mapa = () => {
         iconAnchor: [20, 40],
         popupAnchor: [0, -40],
       });
+
       const dota = L.icon({
         iconUrl: dota2,
         iconSize: [60, 60],
@@ -94,252 +106,360 @@ const Mapa = () => {
         popupAnchor: [0, -40],
       });
 
-      
+      const popupContentBernabeu = (title: string, game: string, date: string, capacity: string, imgUrl: string) => `
+        <div style="text-align: center;">
+          <h3>${title}</h3>
+          <p>Capacidad: ${capacity}</p>
+          <p>${game}</p>
+          <p>Fecha: ${date}</p>
+          <img src="${imgUrl}" alt="${title}" 
+            style="width: 200px; height: auto; margin-top: 8px; border-radius: 8px;" />
+        </div>
+      `;
 
-          const popupContentBernabeu = (game: string, date: string) => `
-            <div style="text-align: center;">
-              <h3>Santiago Bernabéu</h3>
-              <p>Capacidad: 77.000 personas</p>
-              <p>${game}</p>
-              <p>Fecha: ${date}</p>
-              <img src="{bernabeuImage}" alt="Santiago Bernabéu" 
-                  style="width: 200px; height: auto; margin-top: 8px; border-radius: 8px;" />
-            </div>
-          `;
+      L.marker([40.465, -3.749], { icon: lol })
+        .addTo(map)
+        .bindPopup(popupContentBernabeu("Santiago Bernabéu", "League of Legends World Championship - Semifinal", "28 de octubre de 2025", "77.000 personas", "ruta/de/imagen.jpg"));
 
-          const popupContentLondonFinal = (game: string, date: string) => `
-            <div style="text-align: center;">
-              <h3>O2 Arena, Londres</h3>
-              <p>Capacidad: 20.000 personas</p>
-              <p>${game}</p>
-              <p>Fecha: ${date}</p>
-              <img src="{londonImage}" alt="O2 Arena" 
-                  style="width: 200px; height: auto; margin-top: 8px; border-radius: 8px;" />
-            </div>
-          `;
+      L.marker([51.504, -0.128], { icon: Overwatch })
+        .addTo(map)
+        .bindPopup(popupContentBernabeu("O2 Arena, Londres", "Overwatch World Cup", "Noviembre de 2025", "20.000 personas", "ruta/de/imagen.jpg"));
 
-          const popupContentBerlin = (game: string, date: string) => `
-            <div style="text-align: center;">
-              <h3>Riot Games Arena, Berlín</h3>
-              <p>Capacidad: 500 personas</p>
-              <p>${game}</p>
-              <p>Fecha: ${date}</p>
-              <img src="{berlinImage}" alt="Riot Games Arena" 
-                  style="width: 200px; height: auto; margin-top: 8px; border-radius: 8px;" />
-            </div>
-          `;
+      L.marker([52.521, 13.406], { icon: lol })
+        .addTo(map)
+        .bindPopup(popupContentBernabeu("Riot Games Arena, Berlín", "League of Legends MSI", "Mayo de 2025", "500 personas", "ruta/de/imagen.jpg"));
 
-          const popupContentCopenhagen = (game: string, date: string) => `
-            <div style="text-align: center;">
-              <h3>Royal Arena, Copenhague</h3>
-              <p>Capacidad: 16.000 personas</p>
-              <p>${game}</p>
-              <p>Fecha: ${date}</p>
-              <img src="{copenhagenImage}" alt="Royal Arena" 
-                  style="width: 200px; height: auto; margin-top: 8px; border-radius: 8px;" />
-            </div>
-          `;
+      L.marker([55.677, 12.569], { icon: valorant })
+        .addTo(map)
+        .bindPopup(popupContentBernabeu("Royal Arena, Copenhague", "Valorant Masters", "Agosto de 2025", "16.000 personas", "ruta/de/imagen.jpg"));
 
-          const popupContentKatowice = (game: string, date: string) => `
-            <div style="text-align: center;">
-              <h3>Spodek Arena, Katowice</h3>
-              <p>Capacidad: 11.500 personas</p>
-              <p>${game}</p>
-              <p>Fecha: ${date}</p>
-              <img src="{katowiceImage}" alt="Spodek Arena" 
-                  style="width: 200px; height: auto; margin-top: 8px; border-radius: 8px;" />
-            </div>
-          `;
+      L.marker([50.266, 19.024], { icon: valorant })
+        .addTo(map)
+        .bindPopup(popupContentBernabeu("Spodek Arena, Katowice", "IEM Katowice 2025", "Febrero de 2025", "11.500 personas", "ruta/de/imagen.jpg"));
 
-          const popupContentShanghai = (game: string, date: string) => `
-            <div style="text-align: center;">
-              <h3>Mercedes-Benz Arena, Shanghái</h3>
-              <p>Capacidad: 18.000 personas</p>
-              <p>${game}</p>
-              <p>Fecha: ${date}</p>
-              <img src="$shanghaiImage}" alt="Mercedes-Benz Arena" 
-                  style="width: 200px; height: auto; margin-top: 8px; border-radius: 8px;" />
-            </div>
-          `;
+      L.marker([31.231, 121.474], { icon: lol })
+        .addTo(map)
+        .bindPopup(popupContentBernabeu("Mercedes-Benz Arena, Shanghái", "League of Legends Worlds Final", "Noviembre de 2025", "18.000 personas", "ruta/de/imagen.jpg"));
 
-          const popupContentSeattle = (game: string, date: string) => `
-            <div style="text-align: center;">
-              <h3>Climate Pledge Arena, Seattle</h3>
-              <p>Capacidad: 17.459 personas</p>
-              <p>${game}</p>
-              <p>Fecha: ${date}</p>
-              <img src="{seattleImage}" alt="Climate Pledge Arena" 
-                  style="width: 200px; height: auto; margin-top: 8px; border-radius: 8px;" />
-            </div>
-          `;
+      L.marker([47.623, -122.355], { icon: dota })
+        .addTo(map)
+        .bindPopup(popupContentBernabeu("Climate Pledge Arena, Seattle", "The International 2025", "Octubre de 2025", "17.459 personas", "ruta/de/imagen.jpg"));
 
-          const popupContentRiyadh = (game: string, date: string) => `
-            <div style="text-align: center;">
-              <h3>SEF Arena, Riad</h3>
-              <p>Capacidad: 22.000 personas</p>
-              <p>${game}</p>
-              <p>Fecha: ${date}</p>
-              <img src="{riyadhImage}" alt="SEF Arena" 
-                  style="width: 200px; height: auto; margin-top: 8px; border-radius: 8px;" />
-            </div>
-          `;
+      L.marker([24.714, 46.676], { icon: RocketLeague })
+        .addTo(map)
+        .bindPopup(popupContentBernabeu("SEF Arena, Riad", "Rocket League World Championship", "Diciembre de 2025", "22.000 personas", "ruta/de/imagen.jpg"));
 
-          const popupContentParis = (game: string, date: string) => `
-            <div style="text-align: center;">
-              <h3>Adidas Arena, París</h3>
-              <p>Capacidad: 20.000 personas</p>
-              <p>${game}</p>
-              <p>Fecha: ${date}</p>
-              <img src="{parisImage}" alt="Adidas Arena" 
-                  style="width: 200px; height: auto; margin-top: 8px; border-radius: 8px;" />
-            </div>
-          `;
+      L.marker([48.857, 2.352], { icon: valorant })
+        .addTo(map)
+        .bindPopup(popupContentBernabeu("Adidas Arena, París", "Valorant Champions", "Septiembre de 2025", "20.000 personas", "ruta/de/imagen.jpg"));
 
-          L.marker([40.465, -3.749], { icon: lol })
-            .addTo(map)
-            .bindPopup(popupContentBernabeu("League of Legends World Championship - Semifinal", "28 de octubre de 2025"));
-
-          L.marker([51.504, -0.128], { icon: Overwatch })
-            .addTo(map)
-            .bindPopup(popupContentLondonFinal("Overwatch World Cup", "Noviembre de 2025"));
-
-          L.marker([52.521, 13.406], { icon: lol })
-            .addTo(map)
-            .bindPopup(popupContentBerlin("League of Legends MSI", "Mayo de 2025"));
-
-          L.marker([55.677, 12.569], { icon: valorant })
-            .addTo(map)
-            .bindPopup(popupContentCopenhagen("Valorant Masters", "Agosto de 2025"));
-
-          L.marker([50.266, 19.024], {  })
-            .addTo(map)
-            .bindPopup(popupContentKatowice("IEM Katowice 2025", "Febrero de 2025"));
-
-          L.marker([31.231, 121.474], { icon: lol })
-            .addTo(map)
-            .bindPopup(popupContentShanghai("League of Legends Worlds Final", "Noviembre de 2025"));
-
-          L.marker([47.623, -122.355], { icon: dota })
-            .addTo(map)
-            .bindPopup(popupContentSeattle("The International 2025", "Octubre de 2025"));
-
-          L.marker([24.714, 46.676], { icon: RocketLeague })
-            .addTo(map)
-            .bindPopup(popupContentRiyadh("Rocket League World Championship", "Diciembre de 2025"));
-
-          L.marker([48.857, 2.352], { icon: valorant })
-            .addTo(map)
-            .bindPopup(popupContentParis("Valorant Champions", "Septiembre de 2025"));
-
-          mapRef.current = map;
-
-    }
-
-    return () => {
-      if (mapRef.current) {
-        mapRef.current.remove();
-        mapRef.current = null;
+        mapRef.current = map;
+      }
+  
+      return () => {
+        if (mapRef.current) {
+          mapRef.current.remove();
+          mapRef.current = null;
+        }
+      };
+    }, []);
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth <= 768);
+      };
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+  
+    const handleCountryClick = (coords: number[]) => {
+      if (mapRef.current && coords.length === 2) {
+        mapRef.current.setView(coords as [number, number], 5);
       }
     };
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const handleCountryClick = (coords: number[]) => {
-    if (mapRef.current && coords.length === 2) {
-      mapRef.current.setView(coords as [number, number], 5);
-    }
-  };
-
   
-
-  return (
-    <div style={{ display: "flex", flexDirection: "column", position: "relative" }}>
-      <div style={{ display: "flex", flexDirection: "column", width: "250px", position: "absolute", right: "10px", top: "80px", zIndex: 1000 }}>
-        {(isDropdownOpen || !isMobile) && (
-          <div
-            style={{
-              background: "#000",
-              color: "white",
-              padding: "15px",
-              borderRadius: "8px",
-              boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
-              maxHeight: "50vh",
-              overflowY: "auto",
-            }}
-          >
-            <h3 style={{ textAlign: "center", marginBottom: "10px" }}>Países</h3>
-            <ul style={{ listStyle: "none", padding: "0", margin: "0" }}>
-              {countries.map((country) => (
-                <li key={country.name} style={{ marginBottom: "10px" }}>
-                  <button
-                    onClick={() => handleCountryClick(country.coords)}
-                    style={{
-                      width: "100%",
-                      background: "#000",
-                      color: "white",
-                      border: "1px solid white",
-                      borderRadius: "10px",
-                      cursor: "pointer",
-                      fontSize: "14px",
-                      transition: "all 0.3s ease-in-out",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = "red";
-                      e.currentTarget.style.transform = "scale(1.1)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = "#000";
-                      e.currentTarget.style.transform = "scale(1)";
-                    }}
-                  >
-                    {country.name}
-                  </button>
-                </li>
-              ))}
-            </ul>
+    const handleAddTag = (event: React.FormEvent<HTMLFormElement>) => {
+      event.preventDefault();
+      const newTag = {
+        coords: [parseFloat((event.currentTarget.elements.namedItem("latitude") as HTMLInputElement).value), parseFloat((event.currentTarget.elements.namedItem("longitude") as HTMLInputElement).value)] as [number, number],
+        icon: (event.currentTarget.elements.namedItem("iconUrl") as HTMLInputElement).value,
+        title: (event.currentTarget.elements.namedItem("title") as HTMLInputElement).value,
+        date: (event.currentTarget.elements.namedItem("date") as HTMLInputElement).value,
+        capacity: (event.currentTarget.elements.namedItem("capacity") as HTMLInputElement).value,
+        imgUrl: (event.currentTarget.elements.namedItem("imgUrl") as HTMLInputElement).value,
+        info: (event.currentTarget.elements.namedItem("info") as HTMLInputElement).value,
+      };
+  
+      const marker = L.marker(newTag.coords, {
+        icon: L.icon({
+          iconUrl: newTag.icon,
+          iconSize: [60, 60],
+          iconAnchor: [20, 40],
+          popupAnchor: [0, -40],
+        }),
+      }).addTo(mapRef.current!).bindPopup(`
+        <div style="text-align: center;">
+          <h3>${newTag.title}</h3>
+          <p>Capacidad: ${newTag.capacity}</p>
+          <p>${newTag.info}</p>
+          <p>Fecha: ${newTag.date}</p>
+          <img src="${newTag.imgUrl}" alt="${newTag.title}" 
+            style="width: 200px; height: auto; margin-top: 8px; border-radius: 8px;" />
+        </div>
+      `);
+  
+      setTags([...tags, { ...newTag, marker }]);
+      event.currentTarget.reset();
+    };
+  
+    const handleRemoveTag = (index: number) => {
+      const updatedTags = [...tags];
+      const removedTag = updatedTags.splice(index, 1)[0];
+      if (mapRef.current && removedTag.marker) {
+        mapRef.current.removeLayer(removedTag.marker);
+      }
+      setTags(updatedTags);
+    };
+  
+    return (
+      <div style={{ display: "flex", flexDirection: "column", position: "relative" }}>
+        {currentRol === "admin" && (
+          <>
+          <div style={{ display: "flex", flexDirection: "column", width: "250px", position: "absolute", left: "10px", top: "80px", zIndex: 1000 }}>
+            <div
+              style={{
+                background: "#000",
+                color: "white",
+                padding: "15px",
+                borderRadius: "8px",
+                boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
+                marginTop: "20px",
+              }}
+            >
+              <h3 style={{ textAlign: "center", marginBottom: "10px" }}>Agregar Etiquetas</h3>
+              <form onSubmit={handleAddTag}>
+                <input
+                  type="text"
+                  name="latitude"
+                  placeholder="Latitud"
+                  required
+                  style={{
+                    width: "calc(100% - 30px)",
+                    padding: "10px",
+                    marginBottom: "10px",
+                    border: "none",
+                    borderRadius: "4px",
+                  }}
+                />
+                <input
+                  type="text"
+                  name="longitude"
+                  placeholder="Longitud"
+                  required
+                  style={{
+                    width: "calc(100% - 30px)",
+                    padding: "10px",
+                    marginBottom: "10px",
+                    border: "none",
+                    borderRadius: "4px",
+                  }}
+                />
+                <input
+                  type="text"
+                  name="iconUrl"
+                  placeholder="URL del Icono"
+                  required
+                  style={{
+                    width: "calc(100% - 30px)",
+                    padding: "10px",
+                    marginBottom: "10px",
+                    border: "none",
+                    borderRadius: "4px",
+                  }}
+                />
+                <input
+                  type="text"
+                  name="title"
+                  placeholder="Título"
+                  required
+                  style={{
+                    width: "calc(100% - 30px)",
+                    padding: "10px",
+                    marginBottom: "10px",
+                    border: "none",
+                    borderRadius: "4px",
+                  }}
+                />
+                <input
+                  type="text"
+                  name="date"
+                  placeholder="Fecha"
+                  required
+                  style={{
+                    width: "calc(100% - 30px)",
+                    padding: "10px",
+                    marginBottom: "10px",
+                    border: "none",
+                    borderRadius: "4px",
+                  }}
+                />
+                <input
+                  type="text"
+                  name="capacity"
+                  placeholder="Capacidad"
+                  required
+                  style={{
+                    width: "calc(100% - 30px)",
+                    padding: "10px",
+                    marginBottom: "10px",
+                    border: "none",
+                    borderRadius: "4px",
+                  }}
+                />
+                <input
+                  type="text"
+                  name="imgUrl"
+                  placeholder="URL de la Imagen"
+                  required
+                  style={{
+                    width: "calc(100% - 30px)",
+                    padding: "10px",
+                    marginBottom: "10px",
+                    border: "none",
+                    borderRadius: "4px",
+                  }}
+                />
+                <input
+                  type="text"
+                  name="info"
+                  placeholder="Información del Torneo"
+                  required
+                  style={{
+                    width: "calc(100% - 30px)",
+                    padding: "10px",
+                    marginBottom: "10px",
+                    border: "none",
+                    borderRadius: "4px",
+                  }}
+                />
+                <button
+                  type="submit"
+                  style={{
+                    width: "100%",
+                    background: "#dc3545",
+                    color: "#fff",
+                    border: "none",
+                    borderRadius: "4px",
+                    cursor: "pointer",
+                    padding: "10px",
+                  }}
+                >
+                  Añadir
+                </button>
+              </form>
+              <ul style={{ listStyle: "none", padding: "0", marginTop: "10px" }}>
+                {tags.map((tag, index) => (
+                  <li key={index} style={{ marginBottom: "5px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                    {tag.title}
+                    <button
+                      onClick={() => handleRemoveTag(index)}
+                      style={{
+                        background: "none",
+                        border: "none",
+                        color: "#dc3545",
+                        cursor: "pointer",
+                        fontSize: "16px",
+                        marginLeft: "10px",
+                      }}
+                    >
+                      ×
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
+          </>
         )}
-      
-      </div>
-
-      {isMobile && (
-        <button
-          onClick={() => setIsDropdownOpen((prev) => !prev)}
+  
+        <div style={{ display: "flex", flexDirection: "column", width: "250px", position: "absolute", right: "10px", top: "80px", zIndex: 1000 }}>
+          {(isDropdownOpen || !isMobile) && (
+            <div
+              style={{
+                background: "#000",
+                color: "white",
+                padding: "15px",
+                borderRadius: "8px",
+                boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
+                maxHeight: "50vh",
+                overflowY: "auto",
+              }}
+            >
+              <h3 style={{ textAlign: "center", marginBottom: "10px" }}>Países</h3>
+              <ul style={{ listStyle: "none", padding: "0", margin: "0" }}>
+                {countries.map((country) => (
+                  <li key={country.name} style={{ marginBottom: "10px" }}>
+                    <button
+                      onClick={() => handleCountryClick(country.coords)}
+                      style={{
+                        width: "100%",
+                        background: "#000",
+                        color: "white",
+                        border: "1px solid white",
+                        borderRadius: "10px",
+                        cursor: "pointer",
+                        fontSize: "14px",
+                        transition: "all 0.3s ease-in-out",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = "red";
+                        e.currentTarget.style.transform = "scale(1.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = "#000";
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    >
+                      {country.name}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+  
+          {isMobile && (
+            <button
+              onClick={() => setIsDropdownOpen((prev) => !prev)}
+              style={{
+                position: "fixed",
+                bottom: "400px",
+                right: "20px",
+                zIndex: 1001,
+                padding: "10px",
+                background: "#dc3545",
+                color: "#101010",
+                border: "none",
+                borderRadius: "50%",
+                cursor: "pointer",
+                boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
+              }}
+            >
+              {isDropdownOpen ? "×" : "☰"}
+            </button>
+          )}
+        </div>
+  
+        <div
+          ref={mapContainerRef}
           style={{
-            position: "fixed",
-            bottom: "400px",
-            right: "20px",
-            zIndex: 1001,
-            padding: "10px",
-            background: "#dc3545",
-            color: "#101010",
-            border: "none",
-            borderRadius: "50%",
-            cursor: "pointer",
-            boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
+            marginTop: "8.5vh",
+            height: "85vh",
+            width: "100%",
           }}
-        >
-          {isDropdownOpen ? "×" : "☰"}
-        </button>
-      )}
-
-      <div
-        ref={mapContainerRef}
-        style={{
-          marginTop: "8.5vh",
-          height: "75vh",
-          width: "100%",
-        }}
-      ></div>
-    </div>
-  );
-};
-
-export default Mapa;
+        ></div>
+      </div>
+    );
+  };
+  
+  export default Mapa;

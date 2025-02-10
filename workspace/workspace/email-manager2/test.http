@@ -1,0 +1,22 @@
+@url = https://api.pandascore.co/leagues
+
+
+POST  http://localhost:8000/api/login
+Content-Type: application/json
+
+{
+  "email": "mgoyago23wg@ikzubirimanteo.com",
+  "password": "1234"
+}
+
+### 
+POST http://localhost:8000/api/users/buy
+Content-Type: application/json
+Authorization: Bearer 27|H1oD6WdNWT8p4qxW0CXvFIDo6B1alaxi4cyE1EQd33e58da2
+
+{
+  "points": 10
+}
+
+###
+GET http://localhost:8000/api/trivialRandom

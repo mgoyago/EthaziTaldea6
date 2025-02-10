@@ -8,7 +8,12 @@ import valorant from '../../assets/img/jokoak/valorant.png';
 import rocket from '../../assets/img/jokoak/rocket.png';
 import fifa from '../../assets/img/jokoak/fifa.png';
 
-function Jokoak() {
+interface JokoakProps {
+  setCurrentSection: (section: string) => void;
+  setLeagueId: (section: string) => void;
+}
+
+function Jokoak({setCurrentSection, setLeagueId}:JokoakProps) {
   const [gamesData, setGamesData] = useState([]);
   const [activeMenu, setActiveMenu] = useState("Select Game");
   const [loading, setLoading] = useState(false);
@@ -58,6 +63,11 @@ function Jokoak() {
     setActiveMenu(game.name);
     fetchTournaments(game.classId, game.name);
   };
+
+  function aldaketa(leagueId){
+    setLeagueId(leagueId);
+    setCurrentSection('liga');
+  }
 
   return (
     <div className="container-fluid bg-black position-relative w-100 pb-3 px-3">
@@ -129,7 +139,7 @@ function Jokoak() {
                                   </p>
                                 </div>
                                 <div className="d-flex flex-column align-items-center align-items-lg-end gap-2">
-                                  <button className="btn btn-danger btn-sm fw-bold text-dark w-auto">View Details</button>
+                                  <button className="btn btn-danger btn-sm fw-bold text-dark w-auto" onClick={()=> aldaketa(tournament.id)}>View Details</button>
                                   <span className={`badge bg-success fw-bold p-2` }>
                                     {tournament.status || 'Active'}
                                   </span>

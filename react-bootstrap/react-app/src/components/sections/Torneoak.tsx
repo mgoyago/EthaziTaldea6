@@ -1,10 +1,15 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
-import { Card, Container, Row, Col } from "react-bootstrap";
+import { Card, Row, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
-import cs from "../../assets/img/jokoak/csgo.png"; // Importa la imagen predeterminada
+import cs from "../../assets/img/jokoak/csgo.png";
 
-function Torneoak() {
+interface TorneoakProps {
+  setCurrentSection: (section: string) => void;
+  setLeagueId: (section: string) => void;
+}
+
+function Torneoak({setCurrentSection, setLeagueId}:TorneoakProps) {
   const [torneos, setTorneos] = useState([]);
 
   useEffect(() => {
@@ -18,11 +23,18 @@ function Torneoak() {
       });
   }, []);
 
+  function aldaketa(leagueId){
+    setLeagueId(leagueId);
+    setCurrentSection('liga');
+  }
+
   return (
-    <Container>
+    <div className="bg-black text-light min-vh-100 ">
       <br />
-      <h2 className="text-center mb-4">🏆 Torneos de Esports 🏆</h2>
-      <Row className="justify-content-center">
+      <br />
+      <br />
+      <br />
+      <Row className="justify-content-center mx-1">
         {torneos.map((torneo, index) => (
           <Col key={torneo.id} md={6} lg={4} className="mb-4 d-flex" style={{ minHeight: '100%' }}>
             <motion.div
@@ -33,21 +45,23 @@ function Torneoak() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="d-flex flex-column w-100"
             >
-              <Card className="shadow-lg border-0 rounded flex-fill w-100">
+              <Card className="shadow-lg border-0 rounded flex-fill w-100 bg-dark text-light" onClick={()=> aldaketa(torneo.id)}>
                 <Card.Img
                   variant="top"
-                  src={torneo.league.image_url || cs} // Usa la imagen predeterminada si image_url es null
+                  src={torneo.league.image_url || cs}
                   alt={torneo.league.name}
                   className="p-3"
                   style={{
-                    height: "200px", // Mantiene la altura constante para todas las imágenes
-                    width: "100%", // Hace que la imagen ocupe todo el ancho disponible
-                    objectFit: "contain", // Asegura que la imagen se muestre completa sin recortarse
+                    height: "200px",
+                    width: "100%",
+                    objectFit: "contain",
                   }}
                 />
-                <Card.Body className="text-center" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                  <Card.Title>{torneo.full_name || "Torneo Desconocido"}</Card.Title>
-                  <Card.Text>
+                <Card.Body className="d-flex flex-column justify-content-between w-100">
+                  <Card.Title className="text-center fw-bold fs-3 text-danger" style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.6)" }}>
+                    {torneo.full_name || "Torneo Desconocido"}
+                  </Card.Title>
+                  <Card.Text className="text-center">
                     <strong>Juego:</strong> {torneo.videogame.name} 🎮
                     <br />
                     <strong>Año:</strong> {torneo.year} 📅
@@ -75,7 +89,7 @@ function Torneoak() {
           </Col>
         ))}
       </Row>
-    </Container>
+    </div>
   );
 }
 

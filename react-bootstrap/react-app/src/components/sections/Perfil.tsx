@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import axios from 'axios';
 
 type Language = 'es' | 'eus' | 'eng';
 
-const Perfil: React.FC<{ currentLanguage: string }> = ({ currentLanguage }) => {
+const Perfil: React.FC<{ currentLanguage: string, setLoged:  (section: string) => void;}> = ({ currentLanguage, setLoged }) => {
   const [profileImage, setProfileImage] = useState<string | null>(null);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -92,8 +93,18 @@ const Perfil: React.FC<{ currentLanguage: string }> = ({ currentLanguage }) => {
   };
 
   const handleLogout = () => {
-    setLoged("ez");
-    console.log("Logout button clicked");
+    axios.post('/api/logout', {}, {
+      headers: {
+          Authorization: `Bearer ${localStorage.getItem('token')}`
+      }
+  })
+  .then(() => {
+      console.log("Logout exitoso");
+      localStorage.removeItem('token');
+      setLoged('ez');
+      window.location.href = '/login';
+  })
+  .catch(error => console.error("Error en el logout:", error));
   };
 
   return (

@@ -10,12 +10,13 @@ function App(){
   const [currentLanguage, setCurrentLanguage] = useState("eus");
   const[currentRol, setCurrentRol] =useState("bezeroa");
   const[loged, setLoged] = useState("ez");
+  const [userScore, setuserScore] = useState<number>(0);
   
   return (
     <>
-      <Header setCurrentSection={setCurrentSection} setCurrentLanguage={setCurrentLanguage} loged={loged}/>
-      <Menua setCurrentSection={setCurrentSection} currentLanguage={currentLanguage} currentRol={currentRol}/>
-      <Section currentSection={currentSection} currentLanguage={currentLanguage} setCurrentSection={setCurrentSection} setCurrentRol={setCurrentRol} setLoged={setLoged} loged/>
+      <Header setCurrentSection={setCurrentSection} setCurrentLanguage={setCurrentLanguage} loged={loged} userScore={userScore}/>
+      <Menua setCurrentSection={setCurrentSection} currentLanguage={currentLanguage} currentRol={currentRol} loged={loged}/>
+      <Section currentSection={currentSection} currentLanguage={currentLanguage} setCurrentSection={setCurrentSection} currentRol={currentRol} setCurrentRol={setCurrentRol} setLoged={setLoged} setuserScore={setuserScore} loged={loged} userScore={userScore}/>
       <Footer currentLanguage={currentLanguage}/>
     </>
   );

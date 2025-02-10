@@ -8,10 +8,11 @@ interface SignInProps {
   setCurrentSection: (section: string) => void;
   setCurrentRol: (section: string) => void;
   setLoged: (section: string) => void;
+  setuserScore: (section: string) => void;
 }
 
 
-function SignIn({ currentLanguage, setCurrentSection, setCurrentRol, setLoged }: SignInProps) {
+function SignIn({ currentLanguage, setCurrentSection, setCurrentRol, setLoged, setuserScore }: SignInProps) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -33,6 +34,7 @@ function SignIn({ currentLanguage, setCurrentSection, setCurrentRol, setLoged }:
       console.log(user.rol);
 
       setCurrentRol(user.rol);
+      setuserScore(user.points);
       setLoged("bai");
 
       setCurrentSection("home");

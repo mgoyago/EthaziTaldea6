@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
+// @ts-ignore
+import translations from "../../assets/translate/translations";
 
-const News: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('Joko guztiak / Kategoriak');
+const News: React.FC<{ currentLanguage?: string }> = ({ currentLanguage = 'eng' }) => {
+  const language = translations[currentLanguage];
+
+  const [selectedCategory, setSelectedCategory] = useState(language.News[1]);
   const [visibleNewsCount, setVisibleNewsCount] = useState(6);
   const [news, setNews] = useState<{ games: any[]; esports: any[] }>({ games: [], esports: [] });
   const [loading, setLoading] = useState(true);
@@ -26,14 +30,14 @@ const News: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    if (selectedCategory === 'Joko guztiak / Kategoriak') {
+    if (selectedCategory === language.News[1]) {
       setFilteredNews([...news.games, ...news.esports]);
-    } else if (selectedCategory === 'Jokoak') {
+    } else if (selectedCategory === language.News[2]) {
       setFilteredNews(news.games);
-    } else if (selectedCategory === 'Esports') {
+    } else if (selectedCategory === language.News[3]) {
       setFilteredNews(news.esports);
     }
-  }, [selectedCategory, news]);
+  }, [selectedCategory, news, language]);
 
   useEffect(() => {
     const storedNews = localStorage.getItem('savedNews');
@@ -62,7 +66,7 @@ const News: React.FC = () => {
     );
   };
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <p>{language.News[4]}</p>;
 
   const cardStyle = {
     width: '100%',
@@ -80,16 +84,16 @@ const News: React.FC = () => {
 
       <div className="row justify-content-center">
         <div className="col-md-8 col-12 text-center">
-          <h4 className="text-white">Albisteak</h4>
+          <h4 className="text-white">{language.News[0]}</h4>
           <div className="mb-3 w-50 mx-auto">
             <select
               className="form-select"
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
             >
-              <option>Joko guztiak / Kategoriak</option>
-              <option>Esports</option>
-              <option>Jokoak</option>
+              <option>{language.News[1]}</option>
+              <option>{language.News[3]}</option>
+              <option>{language.News[2]}</option>
             </select>
           </div>
           <div className="row row-cols-1 row-cols-md-3 g-3 justify-content-center">
@@ -115,7 +119,7 @@ const News: React.FC = () => {
                         className="btn btn-sm btn-outline-light"
                         onClick={() => handleSaveNews(game)}
                       >
-                        💾 Guardar
+                        💾 {language.News[7]}
                       </button>
                       <p className="card-text text-white mb-0" style={{ fontSize: '14px' }}>
                         {new Date(game.publishedAt).toLocaleString()}
@@ -133,14 +137,14 @@ const News: React.FC = () => {
                 className="btn btn-dark mt-3"
                 onClick={() => setVisibleNewsCount(visibleNewsCount + 6)}
               >
-                Gehiago ikusi →
+                {language.News[5]} →
               </button>
             </div>
           )}
         </div>
 
         <div className="col-md-4 col-12 text-center">
-          <h4 className="text-white">Noticias Guardadas</h4>
+          <h4 className="text-white">{language.News[6]}</h4>
           <ul className="list-group list-group-flush">
             {savedNews.slice(0, 3).map((game, index) => (
               <li key={index} className="list-group-item bg-dark text-light">
@@ -153,12 +157,12 @@ const News: React.FC = () => {
                   className="btn btn-sm btn-outline-danger"
                   onClick={() => handleRemoveSavedNews(game)}
                 >
-                  Eliminar
+                  {language.News[8]}
                 </button>
               </li>
             ))}
           </ul>
-          <button className="btn btn-dark mt-3">Ver todas las guardadas →</button>
+          <button className="btn btn-dark mt-3">{language.News[9]} →</button>
         </div>
       </div>
     </div>

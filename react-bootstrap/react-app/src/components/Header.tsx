@@ -6,17 +6,16 @@ import Lupa from '../assets/img/lupa-removebg-preview.png';
 import English from '../assets/img/languages/eng-removebg-preview (1).png';
 import Español from '../assets/img/languages/españa-removebg-preview.png';
 import Euskera from '../assets/img/languages/eusk-removebg-preview.png';
-import axios from 'axios';
 
 interface HeaderProps {
   setCurrentSection: (section: string) => void;
   setCurrentLanguage: (language: string) => void;
   loged: string;
+  userScore: number;
 }
 
-function Header({ setCurrentSection, setCurrentLanguage, loged }: HeaderProps) {
+function Header({ setCurrentSection, setCurrentLanguage, loged, userScore }: HeaderProps) {
   const [currentLanguage, setCurrentLang] = useState<'eng' | 'es' | 'eus'>('eus'); 
-  const [userScore, setuserScore] = useState<number>(0);
 
   const images: { [key in 'eng' | 'es' | 'eus']: string } = {
     eng: English,
@@ -31,25 +30,6 @@ function Header({ setCurrentSection, setCurrentLanguage, loged }: HeaderProps) {
     setCurrentLanguage(selectedLang);
   };
 
-  
-  
-    const fetchUserPoints = async () => {
-      try {
-        const token = localStorage.getItem('token');
-        const response = await axios.get('/api/datuak', {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
-        console.log('Respuesta del servidor:', response.data); 
-        setuserScore(response.data.points); 
-      } catch (err) {
-        console.error('Error al recoger datos', err);
-        alert('Error al recoger datos');
-      }
-    };
-  
-  
   return (
     <div>
       <header
@@ -67,7 +47,6 @@ function Header({ setCurrentSection, setCurrentLanguage, loged }: HeaderProps) {
             
             <div 
               className="user-info ms-3 bg-danger" 
-              onClick={() => fetchUserPoints()}
             >
               <span className="score-label">PT: {userScore}</span>
             </div>
@@ -84,7 +63,6 @@ function Header({ setCurrentSection, setCurrentLanguage, loged }: HeaderProps) {
           
           <div 
             className="user-info ms-3 bg-danger" 
-            onClick={() => fetchUserPoints()}
           >
             <span className="score-label">PT: {userScore}</span>
           </div>

@@ -9,14 +9,16 @@ import apustua from "../assets/img/icons/descarga-removebg-preview (1).png";
 import guri from "../assets/img/icons/inverted_user_icon-removebg-preview.png";
 import Perfil from "../assets/img/icons/usuario_de_perfil_inner_white.png";
 import Admin from "../assets/img/icons/AdminPanel.png";
+import denda from "../assets/img/icons/Denda.png";
 
 interface MenuaProps {
     setCurrentSection: (section: string) => void;
     currentLanguage: string;
     currentRol: string;
+    loged: string;
 }
 
-function Menua({ setCurrentSection, currentLanguage, currentRol }: MenuaProps) {
+function Menua({ setCurrentSection, currentLanguage, currentRol, loged }: MenuaProps) {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -25,11 +27,11 @@ function Menua({ setCurrentSection, currentLanguage, currentRol }: MenuaProps) {
 
     let language = [""];
     if (currentLanguage === "eus") {
-        language = ["Hasiera", "Torneoak", "Jokoak", "Berriak", "Trivial", "Guri Buruz","Kudeatzailea"];
+        language = ["Hasiera", "Torneoak", "Jokoak", "Berriak", "Trivial", "Denda", "Guri Buruz","Kudeatzailea"];
     } else if (currentLanguage === "es") {
-        language = ["Inicio", "Torneos", "Juegos", "Noticias", "Trivial", "Sobre Nosotros","Administrador"];
+        language = ["Inicio", "Torneos", "Juegos", "Noticias", "Trivial", "Tienda", "Sobre Nosotros","Administrador"];
     } else if (currentLanguage === "eng") {
-        language = ["Home", "Tournaments", "Games", "News", "Trivial", "About Us","Admin"];
+        language = ["Home", "Tournaments", "Games", "News", "Trivial","Shop", "About Us","Admin"];
     }
 
     return (
@@ -97,10 +99,22 @@ function Menua({ setCurrentSection, currentLanguage, currentRol }: MenuaProps) {
                                     </a>
                                 </li>
 
+                                
+                                
+                                 <li className="nav-item d-flex mb-4 ms-2" onClick={() => setCurrentSection("Denda")}>
+                                            <img src={denda} style={{ height: "40px" }} alt="Icono Denda" />
+                                            <a className="nav-link active text-white" aria-current="page" href="#" onClick={toggleMenu}>
+                                                {language[5]}
+                                            </a>
+                                 </li>
+
+                           
+                       
+
                                 <li className="nav-item d-flex mb-4" style={{ marginLeft: "-2px" }} onClick={() => setCurrentSection("form")}>
                                     <img src={guri} style={{ height: "30px", marginRight: "-6px" }} alt="Icono Formulario" />
                                     <a className="nav-link text-white" href="#" onClick={toggleMenu}>
-                                        {language[5]}
+                                        {language[6]}
                                     </a>
                                 </li>
 
@@ -111,7 +125,7 @@ function Menua({ setCurrentSection, currentLanguage, currentRol }: MenuaProps) {
                                         <li className="nav-item d-flex mb-4" style={{ marginLeft: "-2px" }} onClick={() => setCurrentSection("admin")}>
                                             <img src={Admin}style={{height: "50px", marginLeft:"4px"}} />
                                             <a className="nav-link text-white" href="#" onClick={toggleMenu}>
-                                                {language[6]}
+                                                {language[7]}
                                             </a>
                                         </li>
                                         
